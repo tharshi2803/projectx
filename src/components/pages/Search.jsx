@@ -1,59 +1,60 @@
-import React, { useState} from 'react';
+import React, { useState } from "react";
+import SelectSearch, { fuzzySearch } from "react-select-search";
 import '../pages/search.css';
 
-function Search(){
-  const [selects, setSelects]=useState();
-  return(
-    
-    <div className="row">
-      <h1>Filter Your Course details </h1>
-      <div className="column">
-      <select>
-        <option value="area">Area</option>
-        <option>Engineering</option>
-        <option>Business</option>
-        <option>Medicine</option>
-        <option>Law</option>
-        <option>Social science</option>
-        <option>Science</option>
-        <option>Education</option>
-        <option>Architecture</option>
-        <option>Arts</option>
-        <option>Mathematics</option>
-        <option>Sports</option>
-        <option>Computer science</option>  
-      </select>
+function Search (){
+  const [value, setValue] = useState("");
+  const [multipleValues, setMultipleValues] = useState([]);
+  const area = [
+    {
+      name: "Engineering",
+      value: "annie.cruz",
+    },
+    {
+      name: "Business",
+    /*disabled: true,*/
+      value: "eli.shelton",
+    },
+    {
+      name: "Medicine",
+      value: "loretta.rogers",
+    },
+    {
+      name: "Law",
+      value: "lloyd.fisher",
+    },
+    {
+      name: "Social science",
+      value: "tiffany.gonzales", 
+    }
+  ];
+  return (
+    <div className="App">
+      <h1>Testing &lt;Select/&gt;</h1>
+      <div style={{ margin: "0 auto", width: 300 }}>
+        <SelectSearch
+          options={area}
+          value={value}
+          onChange={setValue}
+          search
+          filterOptions={fuzzySearch}
+          placeholder="Search something"
+        />
       </div>
-
-      <div className="column">
-      <select>
-        <option>Qualification</option>
-        <option>O Level</option>
-        <option>A Level</option>
-        <option>Both O/L and A/L</option>
-      </select>
+      <div style={{ margin: "0 auto", width: 300, marginTop: 100 }}>
+        <SelectSearch
+          /*multiple={true}*/
+          printOptions={"on-focus"}
+          closeOnSelect={false}
+          options={area}
+          value={multipleValues}
+          onChange={setMultipleValues}
+          search
+          filterOptions={fuzzySearch}
+          placeholder="Search something"
+        />
       </div>
-
-      <div className="column">
-      <select>
-        <option>Course type</option>
-        <option>Certificate</option>
-        <option>Diploma</option>
-        <option>HND</option>
-        <option>Degree</option>
-      </select>
-      </div>
-
-      <div className="column">
-      <select>
-        <option>Institution</option>
-        <option>State</option>
-        <option>Semi</option>
-        <option>Private</option>
-      </select>
-      </div>
-      {/*<button>Search</button>*/}
     </div>
-  )
-}
+  );
+};
 export default Search;

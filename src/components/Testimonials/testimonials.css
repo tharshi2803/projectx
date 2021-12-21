@@ -1,170 +1,133 @@
-$text: #2e293c;
-$secondary: #a09da6;
-
-html,
-body {
-  font-family: "Avenir", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+.carousel-root {
+  width: 64% !important;
+  margin: auto !important;
+  margin-top: 3% !important;
 }
 
-.testimonial-section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &:after {
-    content: "";
-    position: absolute;
-    width: 900px;
-    height: 550px;
-    background: #f2f2f6;
-    right: 0;
-    bottom: 0;
-    opacity: 0.8;
-    z-index: -10;
+.carousel .slide {
+  background: #fff !important;
+  color: black;
+  height: 100%;
+}
+
+.carousel  {
+  width: 139px !important;
+  border-radius: 50%;
+  height: 10px;
+}
+
+.myCarousel {
+  background: #fafafa;
+  margin-top: -6%;
+  width: 54%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6%;
+  padding-bottom: 8%;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: 1px solid #ddd;
+  height: 286px;
+}
+
+.carousel .control-dots {
+  padding-left: 5px !important;
+  outline: 0;
+  bottom: 5% !important;
+}
+
+.myCarousel h3 {
+  color: #222;
+  font-weight: 100;
+  letter-spacing: 0.2px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.myCarousel h4 {
+  text-transform: uppercase;
+  margin-top: 0;
+  padding-top: 0;
+  font-weight: 500;
+  color: #787878;
+  font-size: 14px;
+}
+
+.myCarousel p {
+  font-weight: 100 !important;
+  line-height: 29px !important;
+  color: #222;
+  font-size: 15px;
+  font-family: sans-serif;
+  max-height: 67px;
+}
+
+.myCarousel p:before {
+  content: "“";
+  color: #aaa;
+  font-size: 26px;
+  font-family: monospace;
+  font-weight: 100;
+}
+
+.myCarousel p:after {
+  content: "”";
+  color: #aaa;
+  font-size: 26px;
+  font-family: monospace;
+  font-weight: 100;
+  line-height: 0;
+}
+
+.carousel .control-dots .dot {
+  box-shadow: none !important;
+  background: #454545 !important;
+  outline: 0;
+}
+
+.carousel.carousel-slider .control-arrow {
+  background: #000 !important;
+  height: 50px !important;
+  position: absolute;
+  top: 35% !important;
+}
+
+.App {
+  text-align: center;
+}
+
+@media only screen and (max-width: 934px) {
+  .carousel-root {
+    outline: 0;
+    width: 93% !important;
+    margin: auto !important;
   }
-  .testimonial-container {
-    width: 1280px;
-    min-width: 1280px;
-    height: 600px;
-    position: relative;
-    .arrows {
-      position: absolute;
-      display: flex;
-      width: 100px;
-      align-items: center;
-      justify-content: center;
-      bottom: 0;
-      top: 0;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: 0.3s ease-in-out;
-      &:hover {
-        box-shadow: 0px 0px 30px rgba(0, 0, 80, 0.05);
-      }
-      &.right {
-        right: 0;
-      }
-    }
-    .inner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 600px;}
-      .t-image {
-        width: 500px;
-        height: 600px;
-        display: flex;
-        justify-content: center;
-        align-items: center;}
-        &:after {
-          content: "";
-          position: absolute;
-          width: 200px;
-          height: 200px;
-          background: #3f56da;
-          left: 140px;
-          top: 0;
-          border-radius: 100%;
-          z-index: -9;
-        }
-        ul {
-          display: flex;
-          position: absolute;
-          overflow: hidden;
-          height: 460px;
-          width: 340px;
-          box-shadow: 0px 0px 40px rgba(0, 0, 10, 0.25);}
-          li {
-            height: 460px;
-            width: 340px;
-            img {
-              height: 460px;
-              width: 340px;
-            }
-          }
-        }
-      }
-      .t-content {
-        width: 500px;
-        height: 600px;
-        display: flex;
-        align-items: center;}
-        ul {
-          position: absolute;
-          overflow: hidden;
-          width: 500px;
-          height: 400px;}
-          li {
-            width: 500px;
-            height: 400px;
-            color: text;
-            display: flex;
-            align-items: center;
-            position: absolute;
-            opacity: 0;}
-            &:nth-child(1) {
-              
-                content: "";
-                position: absolute;
-                height: 12px;
-                width: 310px;
-                background: $text;
-                opacity: 0.3;
-                left: 0;
-                top: 206px;
-              
-            }
-            &:nth-child(2) {
-              
-                content: "";
-                position: absolute;
-                height: 12px;
-                width: 148px;
-                background: text;
-                opacity: 0.3;
-                left: 54px;
-                top: 126px;
-              
-            }
-            &:nth-child(3) {
-              
-                content: "";
-                position: absolute;
-                height: 12px;
-                width: 280px;
-                background: text;
-                opacity: 0.3;
-                left: 144px;
-                top: 166px;
-              
-            }
-            .content-inner {
-              width: 500px;}
-              .quote {
-                font-size: 26px;
-                letter-spacing: 0.88px;
-                line-height: 40px;
-                font-weight: 700;
-                margin-bottom: 16px;
-              }
-              .name {
-                font-size: 18px;
-                letter-spacing: 0.88px;
-                line-height: 28px;
-                color: blue;
-                font-weight: 600;
-              }
-              .title {
-                font-size: 18px;
-                letter-spacing: 0.88px;
-                line-height: 28px;
-                color: blue;
-              }
-            }
-          }
-        }
-      }
-    }
+
+  .carousel.carousel-slider .control-arrow {
+    display: none !important;
   }
+  .myCarousel {
+    background: #fafafa;
+    margin-top: -9%;
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8%;
+    padding-bottom: 12.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 1px solid #ddd;
+    height: 269px;
+  }
+
+  .carousel  {
+    width: 24% !important;
+    border-radius: 50%;
+  }
+}
+.image-testimonial{
+  width: 100px;
+  height: 100px;
 }

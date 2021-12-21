@@ -1,0 +1,91 @@
+.detailscontainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  padding-left: 100px;
+  padding-bottom: 50px;
+  background: url("https://wallpaperaccess.com/full/4473911.jpg");
+	background-size: cover;
+  /*background-color: mediumturquoise;*/
+}
+.innercontainer{
+  display: flex;
+  flex-direction: column;
+  max-width: auto;
+  text-align: left;
+  
+}
+.header{
+  margin: 0;
+  color: MidnightBlue;
+  font-weight: 700;
+  font-size: 45px;
+  text-align: left;
+}
+.subheader{
+  margin: 10px 0;
+  color: #000;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: left;
+}
+.textp{
+  color: #000;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: left;
+}
+.formgroup{
+  display: flex;
+  position: relative;
+  height: 53px;
+  margin-top: 1em;
+}
+
+.emailinput{
+    width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: #E0FFFF;
+    color: black;
+    border-radius: 25px;
+    border-bottom-left-radius: 16px;
+    border-top-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top-right-radius: 16px;
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+    height: 100%;
+}
+.emailinput:hover{
+	background-color: white;
+}
+
+
+.btnsubscribe{
+  position: absolute;
+  right: -10px;
+  top: 0;
+  left: 450px;
+  height: 100%;
+  border: none;
+  outline: none;
+  color: midnightblue;
+  background-color: turquoise;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 0 10px;
+}
+.btnsubscribe:hover{
+  color: black;
+  background-color: powderblue;
+}

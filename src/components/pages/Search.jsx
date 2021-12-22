@@ -4,33 +4,107 @@ import '../pages/search.css';
 
 function Search (){
   const [value, setValue] = useState("");
-  const [multipleValues, setMultipleValues] = useState([]);
   const area = [
     {
       name: "Engineering",
-      value: "annie.cruz",
+      value: "engineering",
     },
     {
       name: "Business",
     /*disabled: true,*/
-      value: "eli.shelton",
+      value: "business",
     },
     {
       name: "Medicine",
-      value: "loretta.rogers",
+      value: "medicine",
     },
     {
       name: "Law",
-      value: "lloyd.fisher",
+      value: "law",
     },
     {
       name: "Social science",
-      value: "tiffany.gonzales", 
+      value: "social.science", 
+    },
+    {
+      name: "Science",
+      value: "science", 
+    },
+    {
+      name: "Education",
+      value: "education", 
+    },
+    {
+      name: "Architecture",
+      value: "architecture", 
+    },
+    {
+      name: "Arts",
+      value: "arts", 
+    },
+    {
+      name: "Mathematics",
+      value: "mathematics", 
+    },
+    {
+      name: "Sports",
+      value: "sports", 
+    },
+    {
+      name: "Computer science",
+      value: "computer.science", 
     }
   ];
+  const qualification = [
+    {
+      name: "O Level",
+      value: "o.level",
+    },
+    {
+      name: "A Level",
+      value: "a.level",
+    },
+    {
+      name: "Both O Level and A Level",
+      value: "both",
+    } 
+  ];
+  const coursetype = [
+    {
+      name: "Certificate",
+      value: "certificate",
+    },
+    {
+      name: "Diploma",
+      value: "diploma",
+    },
+    {
+      name: "HND",
+      value: "hnd",
+    },
+    {
+      name: "Degree",
+      value: "degree",
+    },
+  ];
+  const type = [
+    {
+      name: "State",
+      value: "state",
+    },
+    {
+      name: "Semi",
+      value: "semi",
+    },
+    {
+      name: "Private",
+      value: "private",
+    } 
+  ];
   return (
-    <div className="App">
-      <h1>Testing &lt;Select/&gt;</h1>
+    <div className="search-ed">
+      <br />
+      <br />
       <div style={{ margin: "0 auto", width: 300 }}>
         <SelectSearch
           options={area}
@@ -38,20 +112,37 @@ function Search (){
           onChange={setValue}
           search
           filterOptions={fuzzySearch}
-          placeholder="Search something"
+          placeholder="Educational Area"
         />
       </div>
-      <div style={{ margin: "0 auto", width: 300, marginTop: 100 }}>
+      <div style={{ margin: "0 auto", width: 300, marginTop: 50 }}>
         <SelectSearch
-          /*multiple={true}*/
-          printOptions={"on-focus"}
-          closeOnSelect={false}
-          options={area}
-          value={multipleValues}
-          onChange={setMultipleValues}
+          options={qualification}
+          value={value}
+          onChange={setValue}
           search
           filterOptions={fuzzySearch}
-          placeholder="Search something"
+          placeholder="Qualification"
+        />
+      </div>
+      <div style={{ margin: "0 auto", width: 300, marginTop: 50 }}>
+        <SelectSearch
+          options={coursetype}
+          value={value}
+          onChange={setValue}
+          search
+          filterOptions={fuzzySearch}
+          placeholder="Course Type"
+        />
+      </div>
+      <div style={{ margin: "0 auto", width: 300, marginTop: 50 }}>
+        <SelectSearch
+          options={type}
+          value={value}
+          onChange={setValue}
+          search
+          filterOptions={fuzzySearch}
+          placeholder="Institution Type"
         />
       </div>
     </div>

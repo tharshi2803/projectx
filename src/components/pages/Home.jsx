@@ -15,7 +15,7 @@ function Home() {
     {/*<Slider />*/}
     <Mainareas />
     {/*<Partners />*/}
-    {/*<Testimonials />*/}
+    <Testimonials />
     {/*<Ads />*/}
     <Newsletter />
     <Footer />

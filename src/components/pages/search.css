@@ -1,6 +1,16 @@
 /**
  * Main wrapper
  */
+.search-ed{
+  font-family: sans-serif;
+  text-align: center;
+  /*background: url("https://wallpaperaccess.com/full/4473911.jpg");
+	background-size: cover;*/
+  background-image: url("../images/search.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
  .select-search {
   width: 300px;
   position: relative;
@@ -40,7 +50,7 @@
   height: 36px;
   width: 100%;
   padding: 0 16px;
-  background: #fff;
+  background: aliceblue;
   border: 1px solid transparent;
   box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15);
   border-radius: 3px;
@@ -68,7 +78,7 @@
 * Options wrapper
 */
 .select-search__select {
-  background: #fff;
+  background: white;
   box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15);
 }
 
@@ -111,7 +121,7 @@
 }
 
 .select-search__option.is-selected {
-  background: #2fcc8b;
+  background: turquoise;
   color: #fff;
 }
 
@@ -122,8 +132,8 @@
 
 .select-search__option.is-highlighted.is-selected,
 .select-search__option.is-selected:hover {
-  background: #2eb378;
-  color: #fff;
+  background: lightskyblue;
+  color: lightcyan;
 }
 
 /**
@@ -181,7 +191,7 @@
 }
 
 .select-search:not(.select-search--multiple) .select-search__input:hover {
-  border-color: #2fcc8b;
+  border-color: mediumturquoise;
 }
 
 .select-search:not(.select-search--multiple) .select-search__select {
@@ -199,7 +209,7 @@
   position: relative;
   overflow: auto;
   max-height: 260px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid lightblue;
   border-radius: 0 0 3px 3px;
 }
 

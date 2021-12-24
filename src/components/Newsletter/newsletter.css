@@ -3,6 +3,7 @@
   flex-direction: row;
   align-items: center;
   text-align: center;
+  justify-content: center;
   padding-left: 100px;
   padding-bottom: 50px;
   background: url("https://wallpaperaccess.com/full/4473911.jpg");

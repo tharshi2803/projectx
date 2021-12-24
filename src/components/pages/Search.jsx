@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import SelectSearch, { fuzzySearch } from "react-select-search";
 import '../pages/search.css';
 import { Col, Row, Container } from "react-bootstrap";
+//import Card from 'react-bootstrap/Card';
+
+//import Image1 from '../images/image1.jpeg';
 
 
 function Search (){
@@ -157,6 +160,60 @@ function Search (){
       </Row>
       </Container>
   </div>
+  {/*<Row xs={1} md={4} className="g-4">
+  {Array.from({ length: 1 }).map((_, idx) => (
+    <Col>
+      <Card>
+        <Card.Img variant="top" src={Image1} />
+        <Card.Body>
+          <Card.Title>Engineering</Card.Title>
+          <Card.Text>
+            University
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </Col>
+  ))}
+  {Array.from({ length: 1 }).map((_, idx) => (
+    <Col>
+      <Card>
+        <Card.Img variant="top" src={Image1} />
+        <Card.Body>
+          <Card.Title>Engineering</Card.Title>
+          <Card.Text>
+            University
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </Col>
+  ))}
+  {Array.from({ length: 1 }).map((_, idx) => (
+    <Col>
+      <Card>
+        <Card.Img variant="top" src={Image1} />
+        <Card.Body>
+          <Card.Title>Engineering</Card.Title>
+          <Card.Text>
+            University
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </Col>
+  ))}
+  {Array.from({ length: 1 }).map((_, idx) => (
+    <Col>
+      <Card>
+        <Card.Img variant="top" src={Image1} />
+        <Card.Body>
+          <Card.Title>Engineering</Card.Title>
+          <Card.Text>
+            University
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </Col>
+  ))}
+  </Row> <br />*/}
     </div>
     
   );

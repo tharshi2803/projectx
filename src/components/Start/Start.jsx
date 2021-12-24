@@ -18,9 +18,20 @@ function Start(){
                     <div className="col-md-4 d-flex">
                         <div className="home-fact-box mr-md-auto mr-auto">
                             <div className="text-box">
-                            <i className="fas fa-atom float-left"> Mentoring</i></div>
+                            <i className="fas fa-atom float-left"> Explore </i></div>
                             <div className="text-box">
-                                <h4> Get advice from academic professionals </h4>
+                                <h5>Explore through categories</h5>
+                                <p></p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-4 d-flex">
+                        <div className="home-fact-box mr-md-auto mr-auto">
+                        <div className="text-box">
+                            <i className="fas fa-user-graduate float-left"> Choose</i></div>
+                            <div className="text-box">
+                                <h5>Choose best courses for you</h5>
                                 <p></p>
                             </div>
                         </div>
@@ -28,20 +39,10 @@ function Start(){
                     <div className="col-md-4 d-flex">
                         <div className="home-fact-box mr-md-auto mr-auto">
                         <div className="text-box">
-                            <i className="fas fa-user-graduate float-left">  Explore</i></div>
+                            <i className="fas fa-award float-left"> Achieve </i></div>
                             <div className="text-box">
-                                <h4>Explore through categories</h4>
-                                <p>Find the best courses for you</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4 d-flex">
-                        <div className="home-fact-box mr-md-auto mr-auto">
-                        <div className="text-box">
-                            <i className="fas fa-award float-left"> Lorem</i></div>
-                            <div className="text-box">
-                                <h4>Lorem ipsum</h4>
-                                <p>Lorem ipsum</p>
+                                <h5>Achieve your goals</h5>
+                                <p></p>
                             </div>
                         </div>
                     </div>

@@ -11,7 +11,7 @@ function Contact(){
     return(
     <>
 		<div className="coverg">
-		<div className="text">Connect with us............</div>
+		<div className="text">Connect with us...</div>
 		<div className="contact-box">
 		
 			<div className="left">
@@ -19,7 +19,7 @@ function Contact(){
 				<img src={Image1} height="180px" width="320px"/> </div>
 				<div className="address">
 					<p>Phone number - 0123456789</p>
-					<p>Address - No-  </p>
+					{/*<p>Address -  </p>*/}
 				</div>
 				<ul className="list-inline mt-4">
             		<li className="list-inline-item"><a href="#" target="_blank" title="twitter" ><FontAwesomeIcon icon={faTwitter} size="2x" color="#55ACEE"/></a></li>

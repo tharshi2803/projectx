@@ -1,4 +1,4 @@
-/* .search-ed{
+/*.search-ed{
   font-family: sans-serif;
   text-align: center;
   
@@ -13,8 +13,9 @@
   height: fit-content;
 }*/
 .bg{
-  background: url("https://wallpaperaccess.com/full/4473911.jpg");
+  /*background: url("https://wallpaperaccess.com/full/4473911.jpg");*/
   background-size: cover;
+  background-color: #888;
   
 }
 

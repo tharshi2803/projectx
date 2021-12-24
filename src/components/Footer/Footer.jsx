@@ -14,7 +14,7 @@ const Footer = () =>{
     <div class="container py-5">
       <div class="row py-4">
         <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-          <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+          {/*<p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>*/}
           <ul class="list-inline mt-4">
             <li class="list-inline-item"><a href="#" target="_blank" title="twitter" ><FontAwesomeIcon icon={faTwitter} size="2x" color="#55ACEE"/></a></li>
             <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><FontAwesomeIcon icon={faFacebook} size="2x" color="#3B5998"/></a></li>
@@ -23,23 +23,23 @@ const Footer = () =>{
           </ul>
         </div>
         <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-          <h6 class="text-uppercase font-weight-bold mb-4">Product</h6>
+          {/*<h6 class="text-uppercase font-weight-bold mb-4">Product</h6>*/}
           <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a href="#" class="text-muted">How it works</a></li>
-            <li class="mb-2"><a href="#" class="text-muted">Benefits</a></li>
+            {/*<li class="mb-2"><a href="#" class="text-muted">How it works</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Benefits</a></li>*/}
             <li class="mb-2"><a href="#" class="text-muted">Features</a></li>
           </ul>
         </div>
         <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-          <h6 class="text-uppercase font-weight-bold mb-4">Support</h6>
+          {/*<h6 class="text-uppercase font-weight-bold mb-4">Support</h6>*/}
           <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a href="#" class="text-muted">Blog</a></li>
+            {/*<li class="mb-2"><a href="#" class="text-muted">Blog</a></li>*/}
             <li class="mb-2"><a href="#" class="text-muted">Help</a></li>
             <li class="mb-2"><a href="#" class="text-muted">FAQ</a></li>
           </ul>
         </div>
         <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-          <h6 class="text-uppercase font-weight-bold mb-4">Connect With Us....</h6>
+          {/*<h6 class="text-uppercase font-weight-bold mb-4">Connect With Us....</h6>*/}
           <ul class="list-unstyled mb-0">
               {/*<li class="borderbox"><input type="text" placeholder="Enter your name" class="form-control border-0 shadow-0" /> </li> <br/>
               <li><input type="email" placeholder="Enter your email address"  class="form-control border-0 shadow-0" /></li> 

@@ -1,14 +1,21 @@
-/**
- * Main wrapper
- */
-.search-ed{
+/* .search-ed{
   font-family: sans-serif;
   text-align: center;
-  /*background: url("https://wallpaperaccess.com/full/4473911.jpg");
-	background-size: cover;*/
-  background-image: url("../images/search.png");
+  
+	/*background-size: cover;*/
+  /*background-image: url("../images/search.png");
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /*background-position: fixed;
+  background-size: cover;
+  padding-top: 50px;
+  background-color: mediumturquoise;
+  width: auto;
+  height: fit-content;
+}*/
+.bg{
+  background: url("https://wallpaperaccess.com/full/4473911.jpg");
+  background-size: cover;
+  
 }
 
  .select-search {
@@ -16,6 +23,9 @@
   position: relative;
   font-family: "Nunito Sans", sans-serif;
   box-sizing: border-box;
+  color: darkblue;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .select-search *,
@@ -42,15 +52,13 @@
   height: 11px;
 }
 
-/**
-* Input
-*/
+
 .select-search__input {
   display: block;
   height: 36px;
   width: 100%;
   padding: 0 16px;
-  background: aliceblue;
+  background: #fff;
   border: 1px solid transparent;
   box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15);
   border-radius: 3px;
@@ -78,7 +86,7 @@
 * Options wrapper
 */
 .select-search__select {
-  background: white;
+  background: #fff;
   box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15);
 }
 
@@ -121,8 +129,8 @@
 }
 
 .select-search__option.is-selected {
-  background: turquoise;
-  color: #fff;
+  background: #2fcc8b;
+  color: black;
 }
 
 .select-search__option.is-highlighted,
@@ -132,8 +140,8 @@
 
 .select-search__option.is-highlighted.is-selected,
 .select-search__option.is-selected:hover {
-  background: lightskyblue;
-  color: lightcyan;
+  background: mediumturquoise;
+  color: black;
 }
 
 /**
@@ -191,7 +199,7 @@
 }
 
 .select-search:not(.select-search--multiple) .select-search__input:hover {
-  border-color: mediumturquoise;
+  border-color: #2fcc8b;
 }
 
 .select-search:not(.select-search--multiple) .select-search__select {
@@ -209,7 +217,7 @@
   position: relative;
   overflow: auto;
   max-height: 260px;
-  border-top: 1px solid lightblue;
+  border-top: 1px solid #eee;
   border-radius: 0 0 3px 3px;
 }
 

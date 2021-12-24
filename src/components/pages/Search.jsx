@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import SelectSearch, { fuzzySearch } from "react-select-search";
 import '../pages/search.css';
+import { Col, Row, Container } from "react-bootstrap";
+
 
 function Search (){
   const [value, setValue] = useState("");
@@ -102,10 +104,13 @@ function Search (){
     } 
   ];
   return (
+    <div className="bg" >
+    
     <div className="search-ed">
-      <br />
-      <br />
-      <div style={{ margin: "0 auto", width: 300 }}>
+    <Container>
+      <Row>
+      <Col>
+      <div>
         <SelectSearch
           options={area}
           value={value}
@@ -114,8 +119,9 @@ function Search (){
           filterOptions={fuzzySearch}
           placeholder="Educational Area"
         />
-      </div>
-      <div style={{ margin: "0 auto", width: 300, marginTop: 50 }}>
+      </div></Col>
+      <Col>
+      <div>
         <SelectSearch
           options={qualification}
           value={value}
@@ -124,8 +130,9 @@ function Search (){
           filterOptions={fuzzySearch}
           placeholder="Qualification"
         />
-      </div>
-      <div style={{ margin: "0 auto", width: 300, marginTop: 50 }}>
+      </div> </Col>
+      <Col>
+      <div>
         <SelectSearch
           options={coursetype}
           value={value}
@@ -135,7 +142,9 @@ function Search (){
           placeholder="Course Type"
         />
       </div>
-      <div style={{ margin: "0 auto", width: 300, marginTop: 50 }}>
+      </Col>
+      <Col>
+      <div>
         <SelectSearch
           options={type}
           value={value}
@@ -144,8 +153,12 @@ function Search (){
           filterOptions={fuzzySearch}
           placeholder="Institution Type"
         />
-      </div>
+      </div></Col>
+      </Row>
+      </Container>
+  </div>
     </div>
+    
   );
 };
 export default Search;

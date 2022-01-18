@@ -228,3 +228,11 @@
   text-align: center;
   color: #888;
 }
+.btn-search{
+  color: #000;
+  background-color: #eee;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}

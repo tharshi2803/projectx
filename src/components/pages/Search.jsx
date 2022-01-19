@@ -7,20 +7,57 @@ function Search(){
   const [inputValue, setValue] = useState('');
   const [selectedValue, setSelectedValue] = useState(null);
 
+  const [areaId, setAreaId] = useState();
+  const [elements, setElements] = useState();
+  const [element, setElement] =useState();
+
   const handleInputChange = value =>{
     setValue(value);
+    //console.log(inputValue);
+    //setAreaId(element.);
+    setElement(elements.value)
+    console.log(elements);
+    //console.log(element);
+
   }
   const handleChange = value =>{
     setSelectedValue(value);
   }
+    
+  //console.log(selectedValue[0]);
+
   const fetchData = () =>{
-    //return axios.get('https://reqres.in/api/users?page=1')
+    try{
+      
+        //return axios.get('https://reqres.in/api/users?page=1')
     return axios.get('https://projectx-rebornit.herokuapp.com/api/v1/area')
     .then(result =>{
-      const res = result.data.data;
+      const res = result.data;
+      setElements(res);
+      console.log(result.data[0])
       return res;
-    })
+     
+    })}
+    catch(err){
+      console.log()
+    } 
   }
+  const fetchAreaById = () =>{
+    try{
+      
+        //return axios.get('https://reqres.in/api/users?page=1')
+    return axios.get('https://projectx-rebornit.herokuapp.com/api/v1/course/' + areaId)
+    .then(result =>{
+      const res = result.data;
+      console.log(result.data[0].areaName)
+      return res;
+     
+    })}
+    catch(err){
+      console.log()
+    } 
+  }
+
 
   return(
     <div className="container">

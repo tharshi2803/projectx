@@ -15,8 +15,8 @@ function Search(){
     setValue(value);
     //console.log(inputValue);
     //setAreaId(element.);
-    setElement(elements.value)
-    console.log(elements);
+    // setElement(elements.value)
+    // console.log(elements);
     //console.log(element);
 
   }
@@ -33,7 +33,8 @@ function Search(){
     return axios.get('https://projectx-rebornit.herokuapp.com/api/v1/area')
     .then(result =>{
       const res = result.data;
-      setElements(res);
+      //setElements(res);
+      
       console.log(result.data[0])
       return res;
      
@@ -71,7 +72,7 @@ function Search(){
             value={selectedValue}
             getOptionLabel={e => e.areaName}
             getOptionValue={e => e.areaID}
-            loadOptions={fetchData}
+            loadOptions={fetchAreaById}
             onInputChange={handleInputChange}
             onChange={handleChange}
             />

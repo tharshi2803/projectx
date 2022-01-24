@@ -17,150 +17,124 @@ import Image10 from '../images/image10.jpg';
 import Image11 from '../images/image11.jpg';
 import Image12 from '../images/image12.jpg';
 
-function Mainareas(){
-    return(
+function Mainareas() {
+  return (
     <>
-    <br/>
-    {/*<h1 style={{ alignItems:'center', color: "darkblue"}}>Top educational Areas</h1><br/>*/}
-    <div className="h1-head">
-      Top Educational Areas
-    </div>
-    <Container fluid style={{ paddingLeft: "50px", paddingRight: "50px" }}>
-    
-      <Row xs={1} md={4} className="g-4">
- 
-        {Array.from({ length: 1 }).map((_, idx) => (
-          <Col> 
-            <div className="card">
-              <Link to="engineering">
-                <img src={Image1} height="180px" width="320px"/> 
-              </Link>
-            </div>  
-          </Col>
-        ))}
-  
-  
-        {Array.from({ length: 1 }).map((_, idx) => (
-          <Col>
-            <div className="card">
-              <Link to="business">
-                <img src={Image2} height="180px" width="320px"/> 
-              </Link>
-            </div> 
-          </Col>
-        ))}
-  
-        {Array.from({ length: 1 }).map((_, idx) => (
-          <Col>
-            <div className="card">
-              <Link to="medicine">
-                <img src={Image3} height="180px" width="320px"/> 
-              </Link>
-            </div> 
-          </Col>
-        ))}
-    
-        {Array.from({ length: 1 }).map((_, idx) => (
-          <Col>
-            <div className="card">
-              <Link to="law">
-                <img src={Image4} height="180px" width="320px"/> 
-              </Link>
-            </div> 
-          </Col>
-        ))}
-      </Row> <br />
+      <br />
+      <div className="h1-head">
+        Top Educational Areas
+      </div>
 
-      <Row xs={1} md={4} className="g-4">
+      <Row>
+        <Col>
+          <div className="card">
+            <Link to="engineering">
+              <img src={Image1} height="180px" width="320px" />
+            </Link>
+          </div>
+        </Col>
 
-        {Array.from({ length: 1 }).map((_, idx) => (
-          <Col>
-            <div className="card">
-              <Link to="socialscience">
-                <img src={Image5} height="180px" width="320px"/> 
-              </Link>
-            </div> 
-          </Col>
-        ))}
-  
-        {Array.from({ length: 1 }).map((_, idx) => (
-          <Col>
-            <div className="card">
-              <Link to="science">
-                <img src={Image6} height="180px" width="320px"/> 
-              </Link>
-            </div> 
-          </Col>
-        ))}
-  
-        {Array.from({ length: 1 }).map((_, idx) => (
-          <Col>
-            <div className="card">
-              <Link to="education">
-                <img src={Image7} height="180px" width="320px"/> 
-              </Link>
-            </div> 
-          </Col>
-        ))}
-  
-        {Array.from({ length: 1 }).map((_, idx) => (
-          <Col>
-            <div className="card">
-              <Link to="architecture">
-                <img src={Image8} height="180px" width="320px"/> 
-              </Link>
-            </div> 
-          </Col>
-        ))}
+        <Col>
+          <div className="card">
+            <Link to="business">
+              <img src={Image2} height="180px" width="320px" />
+            </Link>
+          </div>
+        </Col>
+
+        <Col>
+          <div className="card">
+            <Link to="medicine">
+              <img src={Image3} height="180px" width="320px" />
+            </Link>
+          </div>
+        </Col>
+
+        <Col>
+          <div className="card">
+            <Link to="law">
+              <img src={Image4} height="180px" width="320px" />
+            </Link>
+          </div>
+        </Col>
+
       </Row> 
       <br />
 
-      <Row xs={1} md={4} className="g-4">
-        {Array.from({ length: 1 }).map((_, idx) => (
-          <Col>
-            <div className="card">
-              <Link to="arts">
-                <img src={Image9} height="180px" width="320px"/> 
-              </Link>
-            </div> 
-          </Col>
-        ))}
+      <Row>
 
-        {Array.from({ length: 1 }).map((_, idx) => (
-          <Col>
-            <div className="card">
-              <Link to="mathematics">
-                <img src={Image10} height="180px" width="320px"/> 
-              </Link>
-            </div> 
-          </Col>
-        ))}
-  
-        {Array.from({ length: 1 }).map((_, idx) => (
-          <Col>
-            <div className="card">
-              <Link to="sports">
-                <img src={Image11} height="180px" width="320px"/> 
-              </Link>
-            </div> 
-          </Col>
-        ))}
+        <Col>
+          <div className="card">
+            <Link to="socialscience">
+              <img src={Image5} height="180px" width="320px" />
+            </Link>
+          </div>
+        </Col>
 
-        {Array.from({ length: 1 }).map((_, idx) => (
-          <Col>
-            <div className="card">
-              <Link to="computerscience">
-                <img src={Image12} height="180px" width="320px"/> 
-              </Link>
-            </div> 
-          </Col>
-        ))}
+        <Col>
+          <div className="card">
+            <Link to="science">
+              <img src={Image6} height="180px" width="320px" />
+            </Link>
+          </div>
+        </Col>
+
+        <Col>
+          <div className="card">
+            <Link to="education">
+              <img src={Image7} height="180px" width="320px" />
+            </Link>
+          </div>
+        </Col>
+
+        <Col>
+          <div className="card">
+            <Link to="architecture">
+              <img src={Image8} height="180px" width="320px" />
+            </Link>
+          </div>
+        </Col>
 
       </Row>
-    </Container>
-  </>
-    )
+      <br />
 
+      <Row>
+
+        <Col>
+          <div className="card">
+            <Link to="arts">
+              <img src={Image9} height="180px" width="320px" />
+            </Link>
+          </div>
+        </Col>
+
+        <Col>
+          <div className="card">
+            <Link to="mathematics">
+              <img src={Image10} height="180px" width="320px" />
+            </Link>
+          </div>
+        </Col>
+
+        <Col>
+          <div className="card">
+            <Link to="sports">
+              <img src={Image11} height="180px" width="320px" />
+            </Link>
+          </div>
+        </Col>
+
+        <Col>
+          <div className="card">
+            <Link to="computerscience">
+              <img src={Image12} height="180px" width="320px" />
+            </Link>
+          </div>
+        </Col>
+
+      </Row>
+
+    </>
+  )
 }
-
 export default Mainareas;

@@ -3,64 +3,92 @@ import "../Navbar/navbar.css";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  const user = true;
+  const [click, setClick] = React.useState(false);
+  const handleClick = () => setClick(!click);
+  const Close = () => setClick(false);
+  
   return (
-    <div className="top">
-      <div className="topLeft">
-        {/*<i className="topIcon fab fa-facebook-square"></i>
-        <i className="topIcon fab fa-instagram-square"></i>
-        <i className="topIcon fab fa-pinterest-square"></i>
-        <i className="topIcon fab fa-twitter-square"></i>*/}
-        <i className="logo">LOGO</i>
-      </div>
-      <div className="topCenter">
-        <ul className="topList">
-          <li className="topListItem">
-              <Link className="link" to="/">
-                  HOME
-              </Link>
-          </li>
-          <li className="topListItem">
-              <Link className="link" to="/programs">
-                  PROGRAMS
-              </Link>
-          </li>
-          <li className="topListItem">
-              <Link className="link" to="/features">
-                  FEATURES
-              </Link>
-          </li>
-          <li className="topListItem">
-            <Link className="link" to="/contact">
-              CONTACT
-            </Link>
-          </li>
-          {/*{user && <li className="topListItem">LOGOUT</li>}*/}
-        </ul>
-      </div>
-      <div className="topRight">
-        {user ? (
-          <Link className="link" to="/signin">
-            <i class="topUserIcon fas fa-user"></i>
-          </Link>
-        ) : (
-          {/*<ul className="topList">
-            <li className="topListItem">
-              <Link className="link" to="/login">
-                LOGIN
+    <div>
+     <div className={click ? "main-container" : ""}  onClick={()=>Close()} />
+      <nav className="navbar" onClick={e => e.stopPropagation()}>
+        <div className="nav-container">
+        <div className="topLeft">
+            Logo      
+          </div>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <Link
+                exact
+                to="/"
+                activeClassName="active"
+                className="nav-links"
+                onClick={click ? handleClick : null}
+              >
+                HOME
               </Link>
             </li>
-            <li className="topListItem">
-              <Link className="link" to="/register">
-                REGISTER
+            <li className="nav-item">
+              <Link
+                exact
+                to="/programs"
+                activeClassName="active"
+                className="nav-links"
+                onClick={click ? handleClick : null}
+              >
+                PROGRAMS
               </Link>
             </li>
-        </ul>*/}
-        )}
-        <Link className="link" to="/search">
-        <i className="topSearchIcon fas fa-search"></i></Link>
-      </div>
-    </div>
+            <li className="nav-item">
+              <Link
+                exact
+                to="/features"
+                activeClassName="active"
+                className="nav-links"
+                onClick={click ? handleClick : null}
+              >
+                FEATURES
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                exact
+                to="/contact"
+                activeClassName="active"
+                className="nav-links"
+               onClick={click ? handleClick : null}
+              >
+                CONTACT 
+              </Link>
+            </li>
+            <div className="topRight">
+              <li className="nav-item">
+                <Link exact
+                  to="/contact"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={click ? handleClick : null}
+                >
+                  <i class="topUserIcon fas fa-user"></i>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link exact
+                  to="/search"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={click ? handleClick : null}>
+                  <i class="topSearchIcon fas fa-search"></i>
+                </Link>
+              </li>
+            </div>
+          </ul>
+          <div className="nav-icon" onClick={handleClick}>
+            <i className={click ? "fa fa-times" : "fa fa-bars"}></i>
+          </div>
+
+        </div>
+      </nav>
+    </ div>
   );
 }
 export default Navbar;

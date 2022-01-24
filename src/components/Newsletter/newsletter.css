@@ -67,7 +67,7 @@
 
 
 .btnsubscribe{
-  position: absolute;
+  position: static;
   right: -10px;
   top: 0;
   left: 450px;
@@ -89,4 +89,16 @@
 .btnsubscribe:hover{
   color: black;
   background-color: powderblue;
+}
+
+@media (min-width: 40rem) {
+  .innercontainer{
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .innercontainer{
+    width: 25%;
+  }
 }

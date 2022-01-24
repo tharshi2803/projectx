@@ -19,6 +19,17 @@
    font-size: 50px;
    font-family: sans-serif;
    text-align: center;
-
-   
  }
+
+
+ @media (min-width: 40rem) {
+  .card{
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .card {
+    width: 25%;
+  }
+}

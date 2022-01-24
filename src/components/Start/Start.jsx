@@ -9,7 +9,7 @@ function Start(){
         <>
 
         <div className="first-img">
-            <img src={Image1} height="500px" width="90%"/>   
+            <img src={Image1} height="auto" width="100%"/>   
         </div>
 
         <section className="home-fact-area">
@@ -51,10 +51,11 @@ function Start(){
         </section>
 
         <div className="second-img">
-            <img src={Image2} height="auto" width="auto"/>
+            <img src={Image2} height="auto" width="100%" />
+            <button type="submit" className="btn-start">
             <Link className="link" to="/search">
-                <button type="submit" className="btn-start">Search</button>
-            </Link>
+                Search
+            </Link></button> 
         </div>
 
         </>

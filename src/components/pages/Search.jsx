@@ -1,142 +1,199 @@
-import React, {useState} from "react";
-import AsyncSelect from "react-select/async";
-import axios, { Axios } from "axios";
+import React, { useState } from "react";
+import SelectSearch, { fuzzySearch } from "react-select-search";
+import '../pages/search.css';
+import { Col, Row, Container } from "react-bootstrap";
+import { useEffect } from "react";
+import axios from "axios";
 
-function Search(){
-  
-  const [inputValue, setValue] = useState('');
-  const [selectedValue, setSelectedValue] = useState(null);
 
-  const [areaId, setAreaId] = useState();
-  const [elements, setElements] = useState();
-  const [element, setElement] =useState();
+function Search() {
+  const [areaValue, setAreaValue] = useState("");
+  const [qualificationValue, setQualificationValue] = useState("");
+  const [courseValue, setCourseValue] = useState("");
+  const [typeValue, setTypeValue] = useState("");
 
-  const handleInputChange = value =>{
-    setValue(value);
-    //console.log(inputValue);
-    //setAreaId(element.);
-    // setElement(elements.value)
-    // console.log(elements);
-    //console.log(element);
+  const area = [
+     {
+       name: "Engineering",
+       value: "engineering",
+     },
+     {
+       name: "Business",
+      /*disabled: true,*/
+       value: "business",
+     },
+     {
+       name: "Medicine",
+       value: "medicine",
+     },
+     {
+       name: "Law",
+       value: "law",
+     },
+     {
+       name: "Social science",
+       value: "social.science",
+     },
+     {
+       name: "Science",
+       value: "science",
+     },
+     {
+       name: "Education",
+       value: "education",
+     },
+     {
+       name: "Architecture",
+       value: "architecture",
+     },
+     {
+       name: "Arts",
+       value: "arts",
+     },
+     {
+       name: "Mathematics",
+       value: "mathematics",
+     },
+     {
+      name: "Sports",
+       value: "sports",
+     },
+     {
+       name: "Computer science",
+       value: "computer.science",
+    }
+   ];
+   const qualification = [
+     {
+       name: "O Level",
+       value: "o.level",
+     },
+     {
+       name: "A Level",
+       value: "a.level",
+     },
+     {
+       name: "Both O Level and A Level",
+       value: "both",
+     }
+   ];
+   const coursetype = [
+      {
+       name: "Certificate",
+       value: "certificate",
+     },
+     {
+       name: "Diploma",
+       value: "diploma",
+     },
+     {
+       name: "HND",
+       value: "hnd",
+     },
+     {
+       name: "Degree",
+       value: "degree",
+     },
+   ];
+   const type = [
+     {
+       name: "State",
+       value: "state",
+     },
+     {
+       name: "Semi",
+       value: "semi",
+     },
+     {
+       name: "Private",
+       value: "private",
+     }
+   ];
 
-  }
-  const handleChange = value =>{
-    setSelectedValue(value);
-  }
-    
-  //console.log(selectedValue[0]);
+   const filter = () => {
+    try {
+      //return axios.get('https://reqres.in/api/users?page=1')
+      return axios.post('https://projectx-rebornit.herokuapp.com/api/v1/course/filtered')
+        .then(result => {
+          const res = result.data;
+          //setElements(res);
 
-  const fetchData = () =>{
-    try{
-      
-        //return axios.get('https://reqres.in/api/users?page=1')
-    return axios.get('https://projectx-rebornit.herokuapp.com/api/v1/area')
-    .then(result =>{
-      const res = result.data;
-      //setElements(res);
-      
-      console.log(result.data[0])
-      return res;
-     
-    })}
-    catch(err){
+          console.log(result.data[0])
+          return res;
+        })
+    }
+    catch (err) {
       console.log()
-    } 
+    }
   }
-  const fetchAreaById = () =>{
-    try{
+  // const handleInputChange = value => {
+  //   setValue(value);
+  // }
+  // const handleChange = value => {
+  //   setAreaValue(value);
+  // }
+
+   return (
+     <div className="bg" >
+       <div className="search-ed">
+         <Container>
+           <Row>
+             <Col>
+               <div>
+                 <SelectSearch
+                   options={area}
+                   value={areaValue}
+                   onChange={setAreaValue}
+                   search
+                   filterOptions={fuzzySearch}
+                   placeholder="Area"
+                 />
+               </div></Col>
+             <Col>
+               <div>
+                <SelectSearch
+                   options={qualification}
+                   value={qualificationValue}
+                   onChange={setQualificationValue}
+                   search
+                   filterOptions={fuzzySearch}
+                   placeholder="Qualification"
+                 />
+               </div> </Col>
+             <Col>
+               <div>
+                 <SelectSearch
+                   options={coursetype}
+                   value={courseValue}
+                   onChange={setCourseValue}
+                   search
+                   filterOptions={fuzzySearch}
+                  placeholder="Course Type"
+                 />
+               </div>
+             </Col>
+             <Col>
+               <div>
+                 <SelectSearch
+                   options={type}
+                   value={typeValue}
+                   onChange={setTypeValue}
+                  search
+                   filterOptions={fuzzySearch}
+                   placeholder="Institution Type"
+                 />
+               </div></Col>
+           </Row>
+           {/* <button className="btn-search">Search</button> */}
+         </Container>
+         {/* <img src="https://cdn.wallpapersafari.com/94/43/Hb1dC0.jpg" /> */}
+       </div>
+
       
-        //return axios.get('https://reqres.in/api/users?page=1')
-    return axios.get('https://projectx-rebornit.herokuapp.com/api/v1/course/' + areaId)
-    .then(result =>{
-      const res = result.data;
-      console.log(result.data[0].areaName)
-      return res;
-     
-    })}
-    catch(err){
-      console.log()
-    } 
-  }
-
-
-  return(
-    <div className="container">
-      <div className="row alert alert-info">Selected: {JSON.stringify(selectedValue || {}, null, 2)}</div>
-      <div className="row">
-        <div className="col-md-4">
-          <div className="col-md-4">
-            <AsyncSelect
-            cacheOptions
-            defaultOptions
-            value={selectedValue}
-            getOptionLabel={e => e.areaName}
-            getOptionValue={e => e.areaID}
-            loadOptions={fetchAreaById}
-            onInputChange={handleInputChange}
-            onChange={handleChange}
-            />
-          </div>
-        </div>
-      </div>
+         
     </div>
-  )
-}
-export default Search;
-
-//import { useState } from "react";
-//import axios, { Axios } from "axios";
-//import React, {useEffect } from 'react';
-//import Card from 'react-bootstrap/Card'
 
 
-{/*function Search(){
-  const [data, setData] = useState([])
-
-  useEffect(() => {
-    axios.get("https://projectx-rebornit.herokuapp.com/api/v1/area")
-    .then(res => {
-      console.log(res.data)
-      setData(res.data)
-    }).catch(err => console.log(err))
-  }, [])
-
-  const arr = data.map((data,index) => {
-
-  return(
-    <>
-    {/* <tr>
-      <td>{data.areaID}</td>
-      <td>{data.areaName}</td>
-      <td>{data.areaDescription}</td>
-    </tr> 
-
-<Card style={{ width: '18rem' }}>
-
-<Card.Body>
-  <Card.Title>{data.areaID}</Card.Title>
-  <Card.Text>
-  {data.areaName}
-  </Card.Text>
-  <Card.Text>
-  {data.areaDescription}
-  </Card.Text>
-  <button variant="primary"></button>
-</Card.Body>
-</Card>
-</>
-  )
-})
-
-return(
-  <table>
-    <th>
-    </th>
-    {arr}
-  </table>
- 
-)
-}
-export default Search; */}
-
-
+   );
+ };
+ export default Search;

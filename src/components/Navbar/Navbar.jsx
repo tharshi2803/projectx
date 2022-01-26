@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "../Navbar/navbar.css";
 import { Link } from "react-router-dom";
+import Image from "../images/logo.png";
 
 function Navbar() {
   const [click, setClick] = React.useState(false);
@@ -13,7 +14,7 @@ function Navbar() {
       <nav className="navbar" onClick={e => e.stopPropagation()}>
         <div className="nav-container">
         <div className="topLeft">
-            Logo      
+            <img src= {Image} height="60px" width="180px"/>      
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">

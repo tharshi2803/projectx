@@ -16,12 +16,8 @@ import CardGroup from 'react-bootstrap/CardGroup';
 function Features() {
   return (
     <>
+  
       <div className="headerb">Explore more Features</div>
-      {/*<div className="headerTitles">
-        <span className="headerTitleSm">Explore more Features</span>
-        {/*<span className="headerTitleLg">Explore more Features</span>
-      </div>
-      {/*<img src={image} height="500px" width="1000px" align-items="center"/>*/}
 
       <Carousel fade>
         <Carousel.Item interval={1000}>
@@ -69,52 +65,77 @@ function Features() {
       <br />
       <br />
       
-      <CardGroup>
-        <Card border="info" style={{ width: '18rem' }}>
-          <Card.Img variant="top" src={imageone} width="100px" height="300px"/>
-          <Card.Body>
-            <Card.Title>Ask from the Expert !</Card.Title>
-            <Card.Text>
-              Students can ask from subject experts to explore their career paths. We are hand with subject experts with whom students can schedule sessions
-              to get advice related to their courses and exploring career.
-            </Card.Text>
-          </Card.Body>
-          <Card.Footer>
-            <small className="text-muted"></small>
-          </Card.Footer>
-        </Card>
-        <Card border="info" style={{ width: '18rem' }}>
-          <Card.Img variant="top" src={imagetwo} width="100px" height="300px"/>
-          <Card.Body>
-            <Card.Title>Find your way</Card.Title>
-            <Card.Text>
-              Our designed roadmaps will give students an idea about the job positions that are availabale.
-              Road map clearly explains the career steps to achieve goal.  
-            </Card.Text>
-          </Card.Body>
-          <Card.Footer>
-            <small className="text-muted"></small>
-          </Card.Footer>
-        </Card>
-        <Card border="info" style={{ width: '18rem' }}>
-          <Card.Img variant="top" src={imagethree} width="100px" height="300px"/>
-          <Card.Body>
-            <Card.Title>Knowledge sharing Webinars</Card.Title>
-            <Card.Text>
-              Webinars will be available time to time to provide support to students to get proper knowledge in relavant educational area. 
-              Information related to webinars will be availabe in our webiste. 
-            </Card.Text>
-          </Card.Body>
-          <Card.Footer>
-            <small className="text-muted"></small>
-          </Card.Footer>
-        </Card>
-      </CardGroup>
+      <div class="features-main">
+        <ul class="features-cards">
+          <li class="cards_item">
+            <div class="features-card">
+              <div class="card_image"><img src="https://assets.codepen.io/652/photo-1468777675496-5782faaea55b.jpeg" alt="mixed vegetable salad in a mason jar. " /></div>
+              <div class="card_content">
+                <h2 class="card_title">Farmstand Salad <span class='right'>$9</span></h2>
 
+                <div class="card_text">
+                  <p>Dig into the freshest veggies of the season! This salad-in-a-jar features a mixture of leafy greens and seasonal vegetables, fresh from the farmer's market.</p>
 
+                  <p>Served with your choice of dressing on the side:</p>
+                  <ul class='option'>
+                    <li>Housemade ranch</li>
+                    <li>Cherry balsamic vinaigrette</li>
+                    <li>Creamy chipotle</li>
+                    <li>Avocado green goddess</li>
+                    <li>Honey mustard</li>
+                  </ul>
 
+                  <p>Add your choice of protein for $2 more.</p>
+                </div>
+              </div>
+            </div>
+          </li>
 
-    </>
+          <li class="cards_item">
+            <div class="features-card">
+              <div class="card_image"><img src="https://assets.codepen.io/652/photo-1520174691701-bc555a3404ca.jpeg" alt="a Reuben sandwich on wax paper. " /></div>
+              <div class="card_content">
+                <h2 class="card_title">Ultimate Reuben <span class='right'>$18</span></h2>
+                <div class="card_text">
+                  <p>All great meals take time, but this one takes it to the next level! More than 650 hours of fermenting, brining, aging, and curing goes into each and every one of our legendary Reuben sandwiches.
+                  </p>
+                  <p>Every element of this extraordinary sandwich is handcrafted in our kitchens, from the rye bread baked from our secret recipe to the cave-aged Swiss cheese, right down to the pickle. The only thing we didn't make on the premises is the toothpick ( but we're looking into how to do that). </p>
+                  <p>This <em>unforgettable</em> sandwich has all of the classic Reuben elements:</p>
+                  <ul class='option'>
+                    <li>corned beef</li>
+                    <li>rye bread</li>
+                    <li>creamy Russian dressing</li>
+                    <li>sauerkraut</li>
+                    <li>Served with a sweet gherkin pickle</li>
+                  </ul>
+                  <p class="noSub"><em>No substitions please!</em></p>
+
+                  <p>Add a side of french fries or sweet potato fries for $2 more, or our housemade pub chips for $1.</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="features-card">
+              <div class="card_image"><img src="https://assets.codepen.io/652/photo-1544510808-91bcbee1df55.jpeg" alt="A side view of a plate of figs and berries. " /></div>
+              <div class="card_content">
+                <h2 class="card_title">Fig &amp; Berry Plate <span class='right'>$16</span></h2>
+                <div class="card_text">
+                  <p><span class="note">Seasonal</span></p>
+                  <p>A succulent sextet of fresh figs join with a selection of bodacious seasonal berries in this refreshing, shareable dessert.</p>
+                  <p>Choose your drizzle:</p>
+                  <ul class='option'>
+                    <li>Cherry-balsamic vinegar</li>
+                    <li>Local honey</li>
+                    <li>Housemade chocolate sauce</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+</>
 
   )
 }

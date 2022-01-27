@@ -32,6 +32,8 @@
     "react-select": "^5.2.1",
     "react-select-search": "^3.0.9",
     "react-spring": "^9.3.2",
+    "reactjs-popup": "^2.0.5",
+    "swiper": "^6.8.4",
     "web-vitals": "^1.1.2",
     "yup": "^0.32.11"
   },

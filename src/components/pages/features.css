@@ -1,47 +1,107 @@
 .headerb {
-    margin-top: 60px;
-    color: midnightblue;
-    font-size: 70px;
-    font-weight: 700;
-    text-align: center;
+  margin-top: 60px;
+  color: midnightblue;
+  font-size: 70px;
+  font-weight: 700;
+  text-align: center;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  background-color: #111;
+}
+
+.features-main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features-cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+.card_image {
+  max-height: 250px;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
   }
-  
-/*.headerTitles {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "Lora", serif;
-    color: #444;
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
   }
-  
-  .headerTitleSm {
-    position: absolute;
-    top: 18%;
-    font-size: 50px;
-  }
-  
-  .headerTitleLg {
-    position: absolute;
-    top: 20%;
-    font-size: 100px;
-  }
-  
-  .headerImg {
-    width: 100%;
-    height: 450px;
-    margin-top: 80px;
-    object-fit: cover;
-  }*/
-  .card {
-    background: #fff;
-    width: 20em;
-    border-radius: 0.6em;
-    margin: 1em;
-    cursor: pointer; 
-    transition: all ease 200ms;
-  }
-  
-  .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 13px 40px -5px hsla(240, 30.1%, 28%, 0.12), 0 8px 32px -8px hsla(0, 0%, 0%, 0.14), 0 -6px 32px -6px hsla(0, 0%, 0%, 0.02);
-  }
+}
+
+.features-card {
+  background-color: #222;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background-color: #222;
+}
+
+.card_title {
+  font-family: 'Bebas Neue', cursive;
+  color: #fff;
+  background-color: #222;
+  border-bottom: 1px solid #d4b255;
+}
+
+.right {
+  float: right;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.card_text {
+  font-family: 'Roboto';
+  color: #fff;
+  background-color: #222;
+}
+
+.note {
+  border-left: 1px solid #d4b255;
+  padding-left: 4px;
+}
+
+.option {
+  list-style-type: none;
+  padding: 10px;
+  line-height: 20px;
+}
+
+.option li {
+  margin: auto;
+}
+
+.option li:before {
+  content: "+ ";
+  background-color: #222;
+  color: #d4b255;
+}
+
+.note, .right, p, .option>li, .option, em {
+  background-color: #222;
+}

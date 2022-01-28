@@ -9,8 +9,8 @@ import { faYoutube, faFacebook, faTwitter, faInstagram } from "@fortawesome/free
 
 function Contact(){
     return(
-    <>
-		<div className="coverg">
+    
+		<div className="contact-background">
 		<div className="text">Connect with us...</div>
 		<div className="contact-box">
 		
@@ -20,13 +20,13 @@ function Contact(){
 				<div className="address">
 					<p>Phone number - 0123456789</p>
 					{/*<p>Address -  </p>*/}
-				</div>
+				
 				<ul className="list-inline mt-4">
             		<li className="list-inline-item"><a href="#" target="_blank" title="twitter" ><FontAwesomeIcon icon={faTwitter} size="2x" color="#55ACEE"/></a></li>
             		<li className="list-inline-item"><a href="#" target="_blank" title="facebook"><FontAwesomeIcon icon={faFacebook} size="2x" color="#3B5998"/></a></li>
             		<li className="list-inline-item"><a href="#" target="_blank" title="instagram"><FontAwesomeIcon icon={faInstagram} size="2x" color="#cd486b"/></a></li>
             		<li className="list-inline-item"><a href="#" target="_blank" title="twitter" ><FontAwesomeIcon icon={faYoutube} size="2x" color="#FF0000"/></a></li>
-          		</ul>
+          		</ul></div>
 			</div>
 			<div className="right">
 				
@@ -38,7 +38,7 @@ function Contact(){
 			</div>
 		</div>
 		</div>
-	</>
+	
     )
 }
 export default Contact;

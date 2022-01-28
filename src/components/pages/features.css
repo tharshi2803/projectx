@@ -1,5 +1,5 @@
-.headerb {
-  margin-top: 60px;
+.header-features {
+  margin-top: 0px;
   color: midnightblue;
   font-size: 70px;
   font-weight: 700;
@@ -7,13 +7,6 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  background-color: #111;
-}
 
 .features-main {
   max-width: 1200px;
@@ -34,7 +27,8 @@
 }
 
 .card_image {
-  max-height: 250px;
+  object-fit: contain;   
+  height: 220px;
 }
 
 @media (min-width: 40rem) {
@@ -50,7 +44,7 @@
 }
 
 .features-card {
-  background-color: #222;
+  background-color: white;
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -60,48 +54,36 @@
 
 .card_content {
   padding: 1rem;
-  background-color: #222;
+  /* background-color: #222; */
 }
 
 .card_title {
-  font-family: 'Bebas Neue', cursive;
-  color: #fff;
-  background-color: #222;
-  border-bottom: 1px solid #d4b255;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  background-color: white;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.right {
+/* .right {
   float: right;
   font-family: 'Bebas Neue', cursive;
-}
+} */
 
 .card_text {
   font-family: 'Roboto';
-  color: #fff;
-  background-color: #222;
+  color: black;
+  background-color: white;
 }
 
-.note {
-  border-left: 1px solid #d4b255;
-  padding-left: 4px;
+.features-p{
+  font-size: 15px;
+  text-align: justify;
 }
-
-.option {
-  list-style-type: none;
-  padding: 10px;
-  line-height: 20px;
-}
-
-.option li {
-  margin: auto;
-}
-
-.option li:before {
-  content: "+ ";
-  background-color: #222;
-  color: #d4b255;
-}
-
-.note, .right, p, .option>li, .option, em {
-  background-color: #222;
+.video{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

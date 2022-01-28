@@ -64,7 +64,7 @@ function Navbar() {
             <div className="topRight">
               <li className="nav-item">
                 <Link exact
-                  to="/contact"
+                  to="/signin"
                   activeClassName="active"
                   className="nav-links"
                   onClick={click ? handleClick : null}

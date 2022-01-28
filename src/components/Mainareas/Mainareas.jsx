@@ -23,7 +23,7 @@ function Mainareas() {
       <br />
       <div className="h1-head">
         Top Educational Areas
-      </div>
+      </div><br />
 
       <Row>
         <Col>

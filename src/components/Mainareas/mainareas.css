@@ -5,6 +5,7 @@
     margin: 1em;
     cursor: pointer; 
     transition: all ease 200ms;
+    margin-left: 25px;
   }
   
   .card:hover {
@@ -13,7 +14,7 @@
   }
   
  .h1-head{
-   color: midnightblue;
+   color: darkcyan;
    font-style: normal;
    font-weight: 700;
    font-size: 50px;

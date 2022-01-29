@@ -2,6 +2,7 @@ import "./program-styles.css"
 import React, { useRef, useState } from "react";
 import RecentProgram from "../RecentProgramComponent";
 import { useEffect } from "react";
+import UpcomingNews from "../UpcomingNews/Index";
 
 const DATA = [
   {
@@ -10,7 +11,7 @@ const DATA = [
     description: "Perhaps the most popular way to style a Remix application in the community is to use tailwind. It has the benefits of inline-style collocation for developer ergonomics and is able to generate a CSS file for Remix to import. The generated CSS file generally caps out around 8-10kb, even for large applications. Load that file into the root.tsx links and be done with it. If you don't have any CSS opinions, this is a great approach. Using plain stylesheets and <link> tags also opens up the ability to decrease.",
     date: new Date(),
     comments: 230,
-    image: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Fbored-ape-yacht-club-nft-3-4-million-record-sothebys-metaverse-tw.jpg?w=960&cbr=1&q=90&fit=max"    
+    image: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Fbored-ape-yacht-club-nft-3-4-million-record-sothebys-metaverse-tw.jpg?w=960&cbr=1&q=90&fit=max"
   },
   {
     id: 2,
@@ -18,7 +19,7 @@ const DATA = [
     description: "Perhaps the most popular way to style a Remix application in the community is to use tailwind. It has the benefits of inline-style collocation for developer ergonomics and is able to generate a CSS file for Remix to import. The generated CSS file generally caps out around 8-10kb, even for large applications. Load that file into the root.tsx links and be done with it. If you don't have any CSS opinions, this is a great approach. Using plain stylesheets and <link> tags also opens up the ability to decrease.",
     date: new Date(),
     comments: 230,
-    image: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Fbored-ape-yacht-club-nft-3-4-million-record-sothebys-metaverse-tw.jpg?w=960&cbr=1&q=90&fit=max"    
+    image: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Fbored-ape-yacht-club-nft-3-4-million-record-sothebys-metaverse-tw.jpg?w=960&cbr=1&q=90&fit=max"
   },
   {
     id: 3,
@@ -26,7 +27,7 @@ const DATA = [
     description: "Perhaps the most popular way to style a Remix application in the community is to use tailwind. It has the benefits of inline-style collocation for developer ergonomics and is able to generate a CSS file for Remix to import. The generated CSS file generally caps out around 8-10kb, even for large applications. Load that file into the root.tsx links and be done with it. If you don't have any CSS opinions, this is a great approach. Using plain stylesheets and <link> tags also opens up the ability to decrease.",
     date: new Date(),
     comments: 230,
-    image: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Fbored-ape-yacht-club-nft-3-4-million-record-sothebys-metaverse-tw.jpg?w=960&cbr=1&q=90&fit=max"   
+    image: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Fbored-ape-yacht-club-nft-3-4-million-record-sothebys-metaverse-tw.jpg?w=960&cbr=1&q=90&fit=max"
   },
   {
     id: 4,
@@ -34,7 +35,7 @@ const DATA = [
     description: "Perhaps the most popular way to style a Remix application in the community is to use tailwind. It has the benefits of inline-style collocation for developer ergonomics and is able to generate a CSS file for Remix to import. The generated CSS file generally caps out around 8-10kb, even for large applications. Load that file into the root.tsx links and be done with it. If you don't have any CSS opinions, this is a great approach. Using plain stylesheets and <link> tags also opens up the ability to decrease.",
     date: new Date(),
     comments: 230,
-    image: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Fbored-ape-yacht-club-nft-3-4-million-record-sothebys-metaverse-tw.jpg?w=960&cbr=1&q=90&fit=max"    
+    image: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Fbored-ape-yacht-club-nft-3-4-million-record-sothebys-metaverse-tw.jpg?w=960&cbr=1&q=90&fit=max"
   },
   {
     id: 5,
@@ -42,35 +43,152 @@ const DATA = [
     description: "Perhaps the most popular way to style a Remix application in the community is to use tailwind. It has the benefits of inline-style collocation for developer ergonomics and is able to generate a CSS file for Remix to import. The generated CSS file generally caps out around 8-10kb, even for large applications. Load that file into the root.tsx links and be done with it. If you don't have any CSS opinions, this is a great approach. Using plain stylesheets and <link> tags also opens up the ability to decrease.",
     date: new Date(),
     comments: 230,
-    image: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Fbored-ape-yacht-club-nft-3-4-million-record-sothebys-metaverse-tw.jpg?w=960&cbr=1&q=90&fit=max"   
+    image: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Fbored-ape-yacht-club-nft-3-4-million-record-sothebys-metaverse-tw.jpg?w=960&cbr=1&q=90&fit=max"
   },
 ]
 
 
 const Programs = () => {
   const loader = useRef(null)
+  const loadMoreRef = useRef(null)
+
+  let counter = 1
+  let tabCounter = 1
+
+  const loaderUpcoming = useRef(null)
+  const loadMoreRefCupcoming = useRef(null)
+
+  let counterUpcoming = 1
+  let tabCounterUpcoming = 1
 
   useEffect(() => {
-    loader.current.style.height = loader.current.firstChild.offsetHeight + 'px'
+    if (window.innerWidth < 1025) {
+      loader.current.style.height = loader.current.firstChild.offsetHeight + 'px'
+      loaderUpcoming.current.style.height = loaderUpcoming.current.firstChild.offsetHeight + 'px'
+    }
+    console.log(window.innerWidth);
   }, [])
-  
+
   const onButtonClick = () => {
-    loader.current.style.height = 'auto'
-    console.log(loader.current.firstChild.offsetHeight);
+    if (window.innerWidth < 767) {
+      counter++
+      loader.current.style.height = loader.current.firstChild.offsetHeight * counter * 1.02 + 'px'
+      setTimeout(() => {
+        window.scrollBy(0, loader.current.firstChild.offsetHeight)
+      }, 600)
+
+      if (counter === DATA.length) {
+        loadMoreRef.current.disabled = true
+      }
+    } else if (window.innerWidth < 1025 && window.innerWidth > 767) {
+      counter = counter + 2
+      tabCounter++
+      loader.current.style.height = loader.current.firstChild.offsetHeight * tabCounter * 1.03 + 'px'
+      setTimeout(() => {
+        window.scrollBy(0, loader.current.firstChild.offsetHeight)
+      }, 600)
+      if (counter >= DATA.length) {
+        loadMoreRef.current.disabled = true
+      }
+    }
+
   };
+
+  const moreUpcomingNews = () => {
+    if (window.innerWidth < 767) {
+      counterUpcoming++
+      loaderUpcoming.current.style.height = loaderUpcoming.current.firstChild.offsetHeight * counterUpcoming * 1.02 + 'px'
+      setTimeout(() => {
+        window.scrollBy(0, loaderUpcoming.current.firstChild.offsetHeight)
+      }, 600)
+
+      if (counterUpcoming === DATA.length) {
+        loadMoreRefCupcoming.current.disabled = true
+      }
+    } else if (window.innerWidth < 1025 && window.innerWidth > 767) {
+      counterUpcoming = counterUpcoming + 2
+      tabCounterUpcoming++
+      loaderUpcoming.current.style.height = loaderUpcoming.current.firstChild.offsetHeight * tabCounterUpcoming * 1.03 + 'px'
+      setTimeout(() => {
+        window.scrollBy(0, loaderUpcoming.current.firstChild.offsetHeight)
+      }, 600)
+      if (counterUpcoming >= DATA.length) {
+        loadMoreRefCupcoming.current.disabled = true
+      }
+    }
+  }
 
   return (
     <div className="container">
-      <h1 className="container mx-auto" style={{ fontFamily: "Quicksand", fontSize: '4rem' }}>Programs</h1>
-      <div className="row container mt-5 mx-auto" ref={loader} style={{ overflow:'hidden' }}>
+      <h1 className="container mx-auto" style={{ fontSize: '4rem', color: '#404040' }}>Programs</h1>
+      <div className="row d-xl-none container mt-5 mx-auto recent-program-container" ref={loader} style={{ overflow: 'hidden' }}>
         {
-        DATA.map(({id, title, description, date, comments, image}) => <RecentProgram key={id} title={title} description={description} date={date} comments={comments} image={image}/>)}
+          DATA.map(({ id, title, description, date, comments, image }, index) => {
+            if (window.innerWidth < 1025) {
+              return (
+                <RecentProgram key={id} title={title} description={description} date={date} comments={comments} image={image} />
+              )
+            } else {
+              return <></>
+            }
+          })}
+      </div>
+
+      <div className="container mt-5 mx-auto recent-program-container d-none d-xl-block" style={{ overflow: 'hidden' }}>
+        <RecentProgram title={DATA[0].title} description={DATA[0].description} date={DATA[0].date} comments={DATA[0].comments} image={DATA[0].image} small={false} />
+        <div className="row">
+          {
+            DATA.map(({ id, title, description, date, comments, image }, index) => {
+              if (window.innerWidth > 1025 && index === 0) {
+              } else {
+                return (
+                  <RecentProgram key={id} title={title} description={description} date={date} comments={comments} image={image} small={true} />
+                )
+              }
+            })}
+        </div>
       </div>
       <div className="d-flex justify-content-center my-4">
-        <button type="button" onClick={() => { onButtonClick() }} class="align-self-center text-white px-5 py-3" style={{ fontSize: '1.6rem', backgroundColor: '#008B8B' }}>Load More</button>
+        <button id="recent-programs-loader" ref={loadMoreRef} type="button" onClick={() => { onButtonClick() }} class="d-xl-none align-self-center text-white px-5 py-3" style={{ fontSize: '1.6rem', backgroundColor: '#008B8B' }}>Load More</button>
       </div>
+
+
+      {/* //*Upcoming News */}
+
+      <h1 className="container mx-auto" style={{ fontSize: '4rem', color: '#404040' }}>Upcoming News</h1>
+      <div className="row d-xl-none container mt-5 mx-auto recent-program-container" ref={loaderUpcoming} style={{ overflow: 'hidden' }}>
+        {
+          DATA.map(({ id, title, description, date, comments, image }, index) => {
+            if (window.innerWidth < 1025) {
+              return (
+                <RecentProgram key={id} title={title} description={description} date={date} comments={comments} image={image} />
+              )
+            } else {
+              return <></>
+            }
+          })}
+      </div>
+
+      <div className="container mt-5 mx-auto recent-program-container d-none d-xl-block" style={{ overflow: 'hidden' }}>
+        <UpcomingNews title={DATA[0].title} description={DATA[0].description} date={DATA[0].date} comments={DATA[0].comments} image={DATA[0].image} small={false} firstItem={true} />
+        <div className="row">
+          {
+            DATA.map(({ id, title, description, date, comments, image }, index) => {
+              if (window.innerWidth > 1025 && index === 0) {
+              } else {
+                return (
+                  <UpcomingNews key={id} title={title} description={description} date={date} comments={comments} image={image} small={true} firstItem={false} />
+                )
+              }
+            })}
+        </div>
+      </div>
+      <div className="d-flex justify-content-center my-4">
+        <button id="recent-programs-loader" ref={loadMoreRefCupcoming} type="button" onClick={() => { moreUpcomingNews() }} class="d-xl-none align-self-center text-white px-5 py-3" style={{ fontSize: '1.6rem', backgroundColor: '#008B8B' }}>Load More</button>
+      </div>
+
     </div>
   );
 };
-  
+
 export default Programs;

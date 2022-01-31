@@ -11,7 +11,7 @@ const DATA = [
     description: "Perhaps the most popular way to style a Remix application in the community is to use tailwind. It has the benefits of inline-style collocation for developer ergonomics and is able to generate a CSS file for Remix to import. The generated CSS file generally caps out around 8-10kb, even for large applications. Load that file into the root.tsx links and be done with it. If you don't have any CSS opinions, this is a great approach. Using plain stylesheets and <link> tags also opens up the ability to decrease.",
     date: new Date(),
     comments: 230,
-    image: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Fbored-ape-yacht-club-nft-3-4-million-record-sothebys-metaverse-tw.jpg?w=960&cbr=1&q=90&fit=max"
+    image: "https://www.bms.lk/Gallery/2019/Graduation/data1/images/041.jpg"
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const DATA = [
     description: "Perhaps the most popular way to style a Remix application in the community is to use tailwind. It has the benefits of inline-style collocation for developer ergonomics and is able to generate a CSS file for Remix to import. The generated CSS file generally caps out around 8-10kb, even for large applications. Load that file into the root.tsx links and be done with it. If you don't have any CSS opinions, this is a great approach. Using plain stylesheets and <link> tags also opens up the ability to decrease.",
     date: new Date(),
     comments: 230,
-    image: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Fbored-ape-yacht-club-nft-3-4-million-record-sothebys-metaverse-tw.jpg?w=960&cbr=1&q=90&fit=max"
+    image: "https://www.bms.lk/Gallery/2019/Graduation/data1/images/041.jpg"
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const DATA = [
     description: "Perhaps the most popular way to style a Remix application in the community is to use tailwind. It has the benefits of inline-style collocation for developer ergonomics and is able to generate a CSS file for Remix to import. The generated CSS file generally caps out around 8-10kb, even for large applications. Load that file into the root.tsx links and be done with it. If you don't have any CSS opinions, this is a great approach. Using plain stylesheets and <link> tags also opens up the ability to decrease.",
     date: new Date(),
     comments: 230,
-    image: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Fbored-ape-yacht-club-nft-3-4-million-record-sothebys-metaverse-tw.jpg?w=960&cbr=1&q=90&fit=max"
+    image: "https://www.bms.lk/Gallery/2019/Graduation/data1/images/041.jpg"
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const DATA = [
     description: "Perhaps the most popular way to style a Remix application in the community is to use tailwind. It has the benefits of inline-style collocation for developer ergonomics and is able to generate a CSS file for Remix to import. The generated CSS file generally caps out around 8-10kb, even for large applications. Load that file into the root.tsx links and be done with it. If you don't have any CSS opinions, this is a great approach. Using plain stylesheets and <link> tags also opens up the ability to decrease.",
     date: new Date(),
     comments: 230,
-    image: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Fbored-ape-yacht-club-nft-3-4-million-record-sothebys-metaverse-tw.jpg?w=960&cbr=1&q=90&fit=max"
+    image: "https://www.bms.lk/Gallery/2019/Graduation/data1/images/041.jpg"
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ const DATA = [
     description: "Perhaps the most popular way to style a Remix application in the community is to use tailwind. It has the benefits of inline-style collocation for developer ergonomics and is able to generate a CSS file for Remix to import. The generated CSS file generally caps out around 8-10kb, even for large applications. Load that file into the root.tsx links and be done with it. If you don't have any CSS opinions, this is a great approach. Using plain stylesheets and <link> tags also opens up the ability to decrease.",
     date: new Date(),
     comments: 230,
-    image: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2021%2F10%2Fbored-ape-yacht-club-nft-3-4-million-record-sothebys-metaverse-tw.jpg?w=960&cbr=1&q=90&fit=max"
+    image: "https://www.bms.lk/Gallery/2019/Graduation/data1/images/041.jpg"
   },
 ]
 
@@ -66,7 +66,6 @@ const Programs = () => {
       loader.current.style.height = loader.current.firstChild.offsetHeight + 'px'
       loaderUpcoming.current.style.height = loaderUpcoming.current.firstChild.offsetHeight + 'px'
     }
-    console.log(window.innerWidth);
   }, [])
 
   const onButtonClick = () => {
@@ -126,7 +125,7 @@ const Programs = () => {
           DATA.map(({ id, title, description, date, comments, image }, index) => {
             if (window.innerWidth < 1025) {
               return (
-                <RecentProgram key={id} title={title} description={description} date={date} comments={comments} image={image} />
+                <RecentProgram key={id} id={id} title={title} description={description} date={date} comments={comments} image={image} />
               )
             } else {
               return <></>
@@ -135,14 +134,14 @@ const Programs = () => {
       </div>
 
       <div className="container mt-5 mx-auto recent-program-container d-none d-xl-block" style={{ overflow: 'hidden' }}>
-        <RecentProgram title={DATA[0].title} description={DATA[0].description} date={DATA[0].date} comments={DATA[0].comments} image={DATA[0].image} small={false} />
+        <RecentProgram id={DATA[0].id} title={DATA[0].title} description={DATA[0].description} date={DATA[0].date} comments={DATA[0].comments} image={DATA[0].image} small={false} />
         <div className="row">
           {
             DATA.map(({ id, title, description, date, comments, image }, index) => {
               if (window.innerWidth > 1025 && index === 0) {
               } else {
                 return (
-                  <RecentProgram key={id} title={title} description={description} date={date} comments={comments} image={image} small={true} />
+                  <RecentProgram key={id} id={id} title={title} description={description} date={date} comments={comments} image={image} small={true} />
                 )
               }
             })}
@@ -161,7 +160,7 @@ const Programs = () => {
           DATA.map(({ id, title, description, date, comments, image }, index) => {
             if (window.innerWidth < 1025) {
               return (
-                <RecentProgram key={id} title={title} description={description} date={date} comments={comments} image={image} />
+                <RecentProgram key={id} id={id} title={title} description={description} date={date} comments={comments} image={image} />
               )
             } else {
               return <></>
@@ -170,14 +169,14 @@ const Programs = () => {
       </div>
 
       <div className="container mt-5 mx-auto recent-program-container d-none d-xl-block" style={{ overflow: 'hidden' }}>
-        <UpcomingNews title={DATA[0].title} description={DATA[0].description} date={DATA[0].date} comments={DATA[0].comments} image={DATA[0].image} small={false} firstItem={true} />
+        <UpcomingNews id={DATA[0].id} title={DATA[0].title} description={DATA[0].description} date={DATA[0].date} comments={DATA[0].comments} image={DATA[0].image} small={false} firstItem={true} />
         <div className="row">
           {
             DATA.map(({ id, title, description, date, comments, image }, index) => {
               if (window.innerWidth > 1025 && index === 0) {
               } else {
                 return (
-                  <UpcomingNews key={id} title={title} description={description} date={date} comments={comments} image={image} small={true} firstItem={false} />
+                  <UpcomingNews key={id} id={id} title={title} description={description} date={date} comments={comments} image={image} small={true} firstItem={false} />
                 )
               }
             })}

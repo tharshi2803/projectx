@@ -1,23 +1,27 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
-function UpcomingNews({ title, description, date, comments, image, small, firstItem }) {
+function UpcomingNews({ id, title, description, date, comments, image, small, firstItem }) {
     if (small) {
         return (
-            <div id="recent-program-hoverby" className="col-4 mb-4 pt-3 text-muted" style={{ fontSize: '1.5rem', cursor: 'pointer', position: 'relative', overflow: 'hidden' }}>
-                <img id="recent-program-image" src={image} alt={title} className="img-fluid" />
-                <div id="hover-recent-program" className="py-3 px-4">
-                    <h2 className="mb-3" style={{ fontSize: '2rem', color: '#fff' }}>{title}</h2>
-                    <div className="d-flex justify-content-between " style={{ color: '#fff' }}>
-                        <p className="">{date.toISOString().slice(0, 10)}</p>
-                        <p className="">{date.toISOString().slice(0, 10)}</p>
+            <Link className="col-4 mb-4 pt-3 text-muted no-underline" to={`/programs/${id}`}>
+                <div id="recent-program-hoverby" style={{ fontSize: '1.5rem', cursor: 'pointer', position: 'relative', overflow: 'hidden' }}>
+                    <img id="recent-program-image" src={image} alt={title} className="img-fluid" />
+                    <div id="hover-recent-program" className="py-3 px-4">
+                        <h2 className="mb-3" style={{ fontSize: '2rem', color: '#fff' }}>{title}</h2>
+                        <div className="d-flex justify-content-between " style={{ color: '#fff' }}>
+                            <p className="">{date.toISOString().slice(0, 10)}</p>
+                            <p className="">{date.toISOString().slice(0, 10)}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Link>
         );
 
     } else if (firstItem) {
         return (
-            <div className="row">
+            <Link to={`/programs/${id}`} className="row no-underline" style={{ textDecoration: 'none' }}>
+                {/* <div> */}
                 <div className="col-6 px-3 mb-4 pt-3">
                     <img src={image} alt={title} className="img-fluid" />
 
@@ -39,11 +43,13 @@ function UpcomingNews({ title, description, date, comments, image, small, firstI
                         <button type="button" class="align-self-center text-white px-5 py-3" style={{ fontSize: '1.6rem', backgroundColor: '#008B8B' }}>Read More</button>
                     </div>
                 </div>
-            </div>
+                {/* </div> */}
+            </Link>
         );
     } else {
         return (
-            <div className="col-sm-4 col-md-6 col-xl-4 px-3 mb-4 pt-3 text-muted" style={{ fontSize: '1.5rem' }}>
+            <Link to={`/programs/${id}`} className="col-sm-4 col-md-6 col-xl-4 px-3 mb-4 pt-3 text-muted no-underline" style={{ fontSize: '1.5rem' }}>
+                {/* <div > */}
                 <img src={image} alt={title} className="img-fluid" />
                 <div className="d-flex justify-content-between py-3">
                     <p className="">{date.toISOString().slice(0, 10)}</p>
@@ -60,7 +66,8 @@ function UpcomingNews({ title, description, date, comments, image, small, firstI
                     </div>
                     <button type="button" class="align-self-center text-white px-5 py-3" style={{ fontSize: '1.6rem', backgroundColor: '#008B8B' }}>Read More</button>
                 </div>
-            </div>
+                {/* </div> */}
+            </Link>
         );
     }
 }

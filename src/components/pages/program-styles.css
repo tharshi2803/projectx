@@ -35,3 +35,18 @@ html {
 h2::after {
     display: none !important;
 }
+
+.no-underline {
+    text-decoration: none;
+}
+
+.para-program {
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .para-program {
+        font-size: 1.7rem;
+        padding: 0 1rem 0 1rem;
+    }
+}

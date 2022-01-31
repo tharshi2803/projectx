@@ -19,6 +19,8 @@ import Computerscience from './components/pages/Computerscience';
 import Search from './components/pages/Search';
 import Signin from './components/pages/Signup';
 import { useState } from 'react';
+import SingleProgram from './components/pages/SingleProgram';
+import ScrollToTop from './utils/ScrollToTop';
 
 
 
@@ -27,10 +29,12 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />    
+        <Navbar />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/programs" element={<Programs  />} />
+          <Route exact path="/programs/:id" element={<SingleProgram />} />
           <Route path="/features" element={<Features />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/search" element={<Search />} />

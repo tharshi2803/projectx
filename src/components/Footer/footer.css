@@ -1,47 +1,15 @@
-
-.body1 {  
-    
-    background: -webkit-linear-gradient(
--45deg
-,#E0FFFF,#F5FFFA);
-    background: -moz-linear-gradient(-45deg,#E0FFFF 0,#F5FFFA 100%);
-    background: -ms-linear-gradient(-45deg,#E0FFFF 0,#F5FFFA 100%);
-    background: -o-linear-gradient(-45deg,#E0FFFF 0,#F5FFFA 100%);
-    background: linear-gradient(
--45deg
-,#E0FFFF,#F5FFFA);
-    height: auto;
-    color: turquoise;
-    margin: 0;
-    padding: 0;
-}
-.list-inline-item{
+.footer-contact{
     color: black;
 }
-.ul-list{
-    font-size: 15px;
+.footer-body{
+    color: cyan;
 }
-  
-/*i {
+.company-name{
     color: black;
-}*/
-  
-/*.form-control::placeholder {
-    font-size: 0.95rem;
-    color: #aaa;
-    font-style: italic;
 }
-  
-.form-control.shadow-0:focus {
-    box-shadow: none;
-}
-  
-.borderbox{
-    border: darkgreen;
-}
-
-.btnsubmit{
-    border: none;
+.company-description{
     color: black;
-    background-color: transparent;
-}*/
+}
+.footer-icons{
+    color: black;
+}

@@ -1,26 +1,3 @@
-html,body, body * { 
-    box-sizing: border-box; 
-    font-family: 'Open Sans', sans-serif; 
-    margin:0;
-    padding:0;
-    color:inherit;
-    background-color:inherit;
-    /* border:2px solid orange; */
- }
-
- body {
-    /*background-image: url(pic.jpg);*/
-    background-size:  cover;
-    background-position:center center;
-    
-  }
- /* .container {
-      width: 100%;
-      padding-top: 100px;
-      padding-bottom: 100px;
-  }*/
-
-
   .login-register-wrapper {
       height: 560px;
       width: 500px;
@@ -31,8 +8,8 @@ html,body, body * {
       border-radius: 5px;
       box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
       overflow: hidden; 
-      color:#ffffff;
-      background-color: black;
+      color:midnightblue;
+      background-color: lightblue;
   }
   
   /* Nav buttons */
@@ -42,6 +19,8 @@ html,body, body * {
     padding-top: 40px;
     opacity: 1;
     margin-bottom: 3em;
+    color: midnightblue;
+    font-size: 15px;
   }
   button {
       font-size: 1.5em;
@@ -55,7 +34,7 @@ html,body, body * {
   }
   button.active {
       padding-bottom: 10px;
-      border-bottom: solid 2px #1059FF;
+      border-bottom: solid 2px midnightblue;
   } 
   
    /* footer: forgot section */
@@ -87,14 +66,14 @@ html,body, body * {
         text-transform: uppercase;
         font-size: 1em;
         text-align: center;
-        color: rgba(255,255,255, 1);
+        color: midnightblue;
         padding: 8px 0px;
         width: 100%;
         height: 35px;
         border: none;
         border-radius: 20px;
         margin-top: 23px;
-        background-color: rgba(16,89,255, 1);
+        background-color: aliceblue;
     
     }
 

@@ -19,6 +19,7 @@ import Computerscience from './components/pages/Computerscience';
 import Search from './components/pages/Search';
 import Signin from './components/pages/Signup';
 import { useState } from 'react';
+import Footer from './components/Footer/Footer';
 
 
 
@@ -27,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />    
+        <Navbar />  
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/programs" element={<Programs  />} />
@@ -49,6 +50,9 @@ function App() {
           <Route path="/sports" element={<Sports />} />
           <Route path="/computerscience" element={<Computerscience />} />
         </Routes>
+
+        <Footer />
+        
       </Router> 
   
     </div>

@@ -6,7 +6,11 @@
   justify-content: center;
   padding-left: 100px;
   padding-bottom: 50px;
-  background: url("https://wallpaperaccess.com/full/4473911.jpg");
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.7)
+  ), darkcyan;
+  /* background: url("https://wallpaperaccess.com/full/4473911.jpg"); */
 	background-size: cover;
   /*background-color: mediumturquoise;*/
 }

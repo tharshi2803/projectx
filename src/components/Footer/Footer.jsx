@@ -1,60 +1,60 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import '../Footer/footer.css';
-import { faYoutube, faFacebook, faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import logo from "../images/logo.png";
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <img src={logo} height="60" width="100" alt="logo" />
+            <h6>Excel Career</h6>
+            <p class="text-justify">We are pioneer in providing guidance to choose educational career path for srilankan students.</p>
+          </div>
 
-    <div class="d-flex flex-column">
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <Link to="/"><li className="footer-list">Home</li></Link>
+              <Link to="/programs"><li className="footer-list">Programs</li></Link>
+              <Link to="/features"><li className="footer-list">Features</li></Link>
+              <Link to="/contact"><li className="footer-list">Contact</li></Link>
+            </ul>
+          </div>
 
-      <div class="footer-body">
-        <div class="container py-5">
-          <div class="row py-4">
-            <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-              <p className="company-name"> Excel Career</p><br />
-              <p className="company-description">We are excellence in providing educational career guidance for students in sriLanka.</p>
-            </div>
+          <div class="col-xs-6 col-md-3">
+            <h6>Connect with us</h6>
+            <ul class="footer-links">
+              <li>0123456789</li>
+              <li>info@gmail.com</li>
+            </ul>
+          </div>
 
-            <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-              <ul class="list-unstyled mb-0 ul-list">
-                <li class="mb-2"><a href="#" class="text-muted">Home</a></li>
-                <li class="mb-2"><a href="#" class="text-muted">Programs</a></li>
-                <li class="mb-2"><a href="#" class="text-muted">Features</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+        </div>
+        <br />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy;  All Rights Reserved by
+              <a href="#">Excel career</a>.
+            </p>
+          </div>
 
-              <ul class="list-unstyled mb-0 ul-list">
-
-                <div className="footer-contact">Contact Us</div>
-                <li class="mb-2"><a href="#" class="text-muted">info@gmail.com</a></li>
-                <li class="mb-2"><a href="#" class="text-muted">1234567890</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-              <div className="footer-icons">Follow us</div>
-              <ul class="list-inline mt-4">
-              <i class="fa fa-facebook"></i>
-                {/* <li class="list-inline-item"><a href="#" target="_blank" title="twitter" ><FontAwesomeIcon icon={faTwitter} size="2x" color="#55ACEE" /></a></li>
-                <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><FontAwesomeIcon icon={faFacebook} size="2x" color="#3B5998" /></a></li>
-                <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><FontAwesomeIcon icon={faInstagram} size="2x" color="#cd486b" /></a></li>
-                <li class="list-inline-item"><a href="#" target="_blank" title="twitter" ><FontAwesomeIcon icon={faYoutube} size="2x" color="#FF0000" /></a></li> */}
-              </ul>
-            </div>
-
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
           </div>
         </div>
-
-
-
-
       </div>
-
-
-    </div>
+    </footer>
 
 
   );

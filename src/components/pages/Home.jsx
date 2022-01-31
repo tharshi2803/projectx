@@ -18,7 +18,7 @@ function Home() {
     <Testimonials />
     {/*<Ads />*/}
     <Newsletter />
-    <Footer />
+    {/* <Footer /> */}
     </>
   );
 }

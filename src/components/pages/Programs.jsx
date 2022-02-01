@@ -7,7 +7,7 @@ import UpcomingNews from "../UpcomingNews/Index";
 const DATA = [
   {
     id: 1,
-    title: "Medical Boot Camp 2022",
+    title: "Nawaloka College of Higher Studies (NCHS) holds its 4th Graduation ceremony",
     description: "Perhaps the most popular way to style a Remix application in the community is to use tailwind. It has the benefits of inline-style collocation for developer ergonomics and is able to generate a CSS file for Remix to import. The generated CSS file generally caps out around 8-10kb, even for large applications. Load that file into the root.tsx links and be done with it. If you don't have any CSS opinions, this is a great approach. Using plain stylesheets and <link> tags also opens up the ability to decrease.",
     date: new Date(),
     comments: 230,
@@ -15,35 +15,51 @@ const DATA = [
   },
   {
     id: 2,
-    title: "Medical Boot Camp 2022",
+    title: "International Collaboration on Sustainable Development",
     description: "Perhaps the most popular way to style a Remix application in the community is to use tailwind. It has the benefits of inline-style collocation for developer ergonomics and is able to generate a CSS file for Remix to import. The generated CSS file generally caps out around 8-10kb, even for large applications. Load that file into the root.tsx links and be done with it. If you don't have any CSS opinions, this is a great approach. Using plain stylesheets and <link> tags also opens up the ability to decrease.",
     date: new Date(),
     comments: 230,
-    image: "https://www.bms.lk/Gallery/2019/Graduation/data1/images/041.jpg"
+    image: "https://law.cmb.ac.lk/wp-content/uploads/2021/10/21Lund-Collaboration_01-1024x768.jpg"
   },
   {
     id: 3,
-    title: "Medical Boot Camp 2022",
+    title: "Master of Business Administration (MBA) - Postgraduate Diploma in Management (PGDM)",
     description: "Perhaps the most popular way to style a Remix application in the community is to use tailwind. It has the benefits of inline-style collocation for developer ergonomics and is able to generate a CSS file for Remix to import. The generated CSS file generally caps out around 8-10kb, even for large applications. Load that file into the root.tsx links and be done with it. If you don't have any CSS opinions, this is a great approach. Using plain stylesheets and <link> tags also opens up the ability to decrease.",
     date: new Date(),
     comments: 230,
-    image: "https://www.bms.lk/Gallery/2019/Graduation/data1/images/041.jpg"
+    image: "https://static.sliit.lk/wp-content/uploads/2022/01/25074227/he-NBQSA-The-ICT-Awards-2021-was-held-at-BMICH-1.jpg"
   },
   {
     id: 4,
-    title: "Medical Boot Camp 2022",
+    title: "UCL Partners with Monash University to Combat Dengue in Sri Lanka",
     description: "Perhaps the most popular way to style a Remix application in the community is to use tailwind. It has the benefits of inline-style collocation for developer ergonomics and is able to generate a CSS file for Remix to import. The generated CSS file generally caps out around 8-10kb, even for large applications. Load that file into the root.tsx links and be done with it. If you don't have any CSS opinions, this is a great approach. Using plain stylesheets and <link> tags also opens up the ability to decrease.",
     date: new Date(),
     comments: 230,
-    image: "https://www.bms.lk/Gallery/2019/Graduation/data1/images/041.jpg"
+    image: "https://www.ucl.lk/news/22.jpg"
   },
   {
     id: 5,
-    title: "Medical Boot Camp 2022",
+    title: "POSTGRADUATE PROGRAMS IN SRI LANKA",
     description: "Perhaps the most popular way to style a Remix application in the community is to use tailwind. It has the benefits of inline-style collocation for developer ergonomics and is able to generate a CSS file for Remix to import. The generated CSS file generally caps out around 8-10kb, even for large applications. Load that file into the root.tsx links and be done with it. If you don't have any CSS opinions, this is a great approach. Using plain stylesheets and <link> tags also opens up the ability to decrease.",
     date: new Date(),
     comments: 230,
-    image: "https://www.bms.lk/Gallery/2019/Graduation/data1/images/041.jpg"
+    image: "https://ancedu.com/wp-content/uploads/2021/03/DSC_4054.jpg"
+  },
+  {
+    id: 6,
+    title: "BBA (Hons) Specialising in Marketing Management",
+    description: "Perhaps the most popular way to style a Remix application in the community is to use tailwind. It has the benefits of inline-style collocation for developer ergonomics and is able to generate a CSS file for Remix to import. The generated CSS file generally caps out around 8-10kb, even for large applications. Load that file into the root.tsx links and be done with it. If you don't have any CSS opinions, this is a great approach. Using plain stylesheets and <link> tags also opens up the ability to decrease.",
+    date: new Date(),
+    comments: 230,
+    image: "https://static.sliit.lk/wp-content/uploads/2017/12/Marketing-Management.jpg"
+  },
+  {
+    id: 7,
+    title: "University of Colombo Leadership Training Program – Phase 02 5 | University of Colombo, Sri Lanka",
+    description: "Perhaps the most popular way to style a Remix application in the community is to use tailwind. It has the benefits of inline-style collocation for developer ergonomics and is able to generate a CSS file for Remix to import. The generated CSS file generally caps out around 8-10kb, even for large applications. Load that file into the root.tsx links and be done with it. If you don't have any CSS opinions, this is a great approach. Using plain stylesheets and <link> tags also opens up the ability to decrease.",
+    date: new Date(),
+    comments: 230,
+    image: "https://cmb.ac.lk/wp-content/uploads/Leadership-Training-Program-Phase-02-5.jpg"
   },
 ]
 

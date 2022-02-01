@@ -6,7 +6,7 @@ function UpcomingNews({ id, title, description, date, comments, image, small, fi
         return (
             <Link className="col-4 mb-4 pt-3 text-muted no-underline" to={`/programs/${id}`}>
                 <div id="recent-program-hoverby" style={{ fontSize: '1.5rem', cursor: 'pointer', position: 'relative', overflow: 'hidden' }}>
-                    <img id="recent-program-image" src={image} alt={title} className="img-fluid" />
+                    <img id="recent-program-image" src={image} alt={title} className="img-fluid" style={{ height: '22rem', width: '44rem', objectFit: 'cover' }} />
                     <div id="hover-recent-program" className="py-3 px-4">
                         <h2 className="mb-3" style={{ fontSize: '2rem', color: '#fff' }}>{title}</h2>
                         <div className="d-flex justify-content-between " style={{ color: '#fff' }}>
@@ -23,7 +23,7 @@ function UpcomingNews({ id, title, description, date, comments, image, small, fi
             <Link to={`/programs/${id}`} className="row no-underline" style={{ textDecoration: 'none' }}>
                 {/* <div> */}
                 <div className="col-6 px-3 mb-4 pt-3">
-                    <img src={image} alt={title} className="img-fluid" />
+                    <img src={image} alt={title} className="img-fluid" style={{ height: '33rem', width: '60rem', objectFit: 'cover' }} />
 
                 </div>
                 <div className='col-6 text-muted' style={{ fontSize: '1.5rem' }}>
@@ -50,7 +50,7 @@ function UpcomingNews({ id, title, description, date, comments, image, small, fi
         return (
             <Link to={`/programs/${id}`} className="col-sm-4 col-md-6 col-xl-4 px-3 mb-4 pt-3 text-muted no-underline" style={{ fontSize: '1.5rem' }}>
                 {/* <div > */}
-                <img src={image} alt={title} className="img-fluid" />
+                <img src={image} alt={title} className="img-fluid" style={{ height: '22rem', width: '44rem', objectFit: 'cover' }} />
                 <div className="d-flex justify-content-between py-3">
                     <p className="">{date.toISOString().slice(0, 10)}</p>
                     <p className="">{date.toISOString().slice(0, 10)}</p>

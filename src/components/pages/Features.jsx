@@ -73,6 +73,7 @@ function Features() {
             </div>
           </li>
         </ul>
+        <br />
       </div>
       </div>
 </>

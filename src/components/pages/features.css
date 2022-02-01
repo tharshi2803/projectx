@@ -59,12 +59,13 @@
 
 .card_title {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: black;
-  background-color: white;
+  color: darkcyan;
+  background-color: none;
   font-size: 20px;
   text-align: center;
   justify-content: center;
   align-items: center;
+  font-weight: 700;
 }
 
 /* .right {
@@ -81,6 +82,7 @@
 .features-p{
   font-size: 15px;
   text-align: justify;
+  color: midnightblue;
 }
 .video{
   display: flex;

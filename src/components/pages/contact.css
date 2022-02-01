@@ -94,13 +94,20 @@ textarea{
     background-color: #fff;
 }
 
-@media screen and (max-width: 880px){
-	.contact-box{
-		grid-template-columns: 1fr;
-	}
-	.left{
-		height: 200px;
-	}
+@media screen and (max-width: 767px){
+	 .contact-box{
+		/* grid-template-columns: 1fr; */
+		width: 75%;
+	} 
+	 /* .left{
+		height: auto;
+		min-width: min-content;
+	} 
+	.right{
+		align-content: center;
+		height: 500px;
+		width: auto;
+	} */
 }
 
  .address{
@@ -116,7 +123,7 @@ textarea{
   	position: absolute;
   	transform: translate(-50%, -50%);
   	color: midnightblue;
-  	top: 100px;
+  	top: 120px;
   	left: 50%;
 	font-size: 50px;
 }

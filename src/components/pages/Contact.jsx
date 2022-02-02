@@ -6,6 +6,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube, faFacebook, faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+// //import 'rsuite/dist/styles/rsuite-default.css';
+// import 'rsuite/styles/index.less';
+// import { Message } from 'rsuite';
+import {Formik} from "formik";
+import * as yup from "yup";
 
 function Contact() {
   const form = useRef();
@@ -20,6 +25,38 @@ function Contact() {
           console.log(error.text);
       });
   };
+  const handleSubmit = event => {
+	event.preventDefault();
+	alert('You have submitted the form.')
+  }
+  const schema = yup.object().shape({
+    name: yup.string().required(),
+    message: yup.string().required(),
+    email: yup.string().required(),
+  });
+  const validate=(values)=>{
+    let errors={};
+    const regex =/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    const numvalidation =/^\d{10}$/;
+    if (!values.email) {
+      errors.email = "Email is required";
+    } else if (!regex.test(values.email)) {
+      errors.email = "Invalid Email";
+    }
+
+    if (!values.mobnum) {
+        errors.mobnum = "Phone Number is required";
+      } else if (values.mobnum.length<10 || values.mobnum.length>10 || !numvalidation.test(values.mobnum) ) {
+        errors.mobnum = "Invalid Phone Number";
+      }
+    
+    if(!values.fname){
+        errors.fname="First name is required.";
+    }
+
+    return errors; 
+};
+
 
   return (
 
@@ -42,20 +79,22 @@ function Contact() {
            		</ul></div>
  			</div>
  			<div className="right">
-				  <form ref={form} onSubmit={sendEmail}>
+				  <form ref={form} onSubmit={sendEmail} onSubmit={handleSubmit}>
 					  
-					  <input type="text" name="user_name" className="field" placeholder="Your Name" />
+					  <input type="text" name="user_name" className="field" placeholder="Your Name" required/>
 					  
-					  <input type="email" name="user_email" className="field" placeholder="Your Email" />
+					  <input type="email" name="user_email" className="field" placeholder="Your Email" required/>
 					  
 					  <input type="text" name="contact_number" className="field" placeholder="Contact number" />
 					  
-					  <textarea name="message" className="field" placeholder="Message" />
+					  <textarea name="message" className="field" placeholder="Message" required/>
 
-					  <Popup trigger={<button className="btn" type="submit"> Send</button>}
+					  <button className="btn" type="submit"> Send</button>
+
+					  {/* <Popup trigger={<button className="btn" type="submit"> Send</button>}
 						  position="right center">
 						  <div className="pop-up">Thank you for contacting us,We'll get back to You soon....</div>
-					  </Popup>
+					  </Popup> */}
 				  </form>
 				  <br />
 				  <br />
